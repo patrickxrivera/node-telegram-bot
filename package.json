@@ -1,0 +1,21 @@
+{
+  "name": "rise-fam-telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxr13/rise-fam-telegram-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pxr13/rise-fam-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/pxr13/rise-fam-telegram-bot#readme"
+}
