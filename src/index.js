@@ -1,4 +1,6 @@
 import TelegramBot from 'node-telegram-bot-api';
+import { getPeopleByRole } from './utils/helpers.js';
+import surveyResponses from './data/surveyResponses.js';
 
 const token = '458016821:AAHPDtnHrIDzRZwtpVqJxOPtJlkmgFnZ2P4';
 const bot = new TelegramBot(token, { polling: true });
@@ -16,25 +18,37 @@ bot.onText(/\/start/, (msg) => {
   });
 });
 
-// const eventEmitter = new events.EventEmitter();
-//
-// eventEmitter.on('Designer', () => {
-//   bot.sendMessage(msg.from.id, `You selected 'Designer!'`);
-// });
-
 bot.onText(/Role/, (msg) => {
   const resp = 'Choose which role you would like to search';
   const searchOptions = [
-    [{ text: 'Designer', callback_data: 'Designer' }],
-    [{ text: 'Engineer', callback_data: 'Engineer' }]
+    ['Engineers', 'Designers', 'Product Managers'],
+    ['Investors', 'Marketers', 'Founders']
   ];
 
   bot.sendMessage(msg.chat.id, resp, {
     reply_markup: {
-      inline_keyboard: searchOptions
+      keyboard: searchOptions
     }
   });
 });
+
+bot.onText(/Engineers/, (msg) => {
+  const resp = 'Select who you would like to search';
+  const role = getSelectedRole(msg);
+  const searchOptions = getPeopleByRole(surveyResponses, role);
+
+  console.log({ role, searchOptions });
+
+  bot.sendMessage(msg.chat.id, resp, {
+    reply_markup: {
+      keyboard: searchOptions
+    }
+  });
+});
+
+const getSelectedRole = (msg) => {
+  return msg.text.slice(0, -1);
+};
 
 // const isWord = (msg, word) => {
 //   return msg.text.toString().indexOf(word) === 0;
