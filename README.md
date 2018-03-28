@@ -8,6 +8,7 @@
 - [ ] Visualize multiple members at once
 - [ ] Ensure social media accounts are deep linked on mobile
 - [ ] Handle unknown searches gracefully
+- [ ] Display list of commands on open
 - [ ] Spice it up with emoji's
 
 
