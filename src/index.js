@@ -51,6 +51,7 @@ bot.onText(regex.roles, (msg) => {
 bot.onText(regex.person, (msg) => {
   const name = msg.text;
   const resp = getPersonViz(surveyResponses, name);
+  const parseHTML = { parse_mode: 'HTML' };
 
-  bot.sendMessage(msg.chat.id, resp);
+  bot.sendMessage(msg.chat.id, resp, parseHTML);
 });

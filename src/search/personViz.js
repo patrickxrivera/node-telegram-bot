@@ -19,10 +19,21 @@ const getVizFor = (person) => {
   return result;
 };
 
+const links = new Set();
+
+links.add('Linkedin');
+links.add('Facebook');
+links.add('Twitter');
+links.add('Instagram');
+
 const getResult = (key, val) => {
   key = toTitleCase(key);
 
   if (key !== 'Timestamp' && key !== 'Rolecategory') {
+    if (links.has(key)) {
+      const linkedText = key.link(val);
+      return `${linkedText}\n`;
+    }
     return `${key}: ${val}\n\n`;
   }
 

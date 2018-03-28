@@ -17,6 +17,7 @@
   "license": "ISC",
   "homepage": "https://github.com/pxr13/rise-fam-telegram-bot#readme",
   "dependencies": {
+    "autolinker": "^1.6.2",
     "express": "^4.16.3",
     "lodash": "^4.17.5",
     "morgan": "^1.9.0",

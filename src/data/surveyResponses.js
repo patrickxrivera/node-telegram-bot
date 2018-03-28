@@ -345,12 +345,12 @@ const surveyResponses = [
       'Programming, Design, EdTech, EDM, Consciousness, and Meditation',
     learning:
       'How to cook, freestyle rap, martial arts, product management,  and blockchain',
-    linkedin: 'https://www.linkedin.com/in/patrickxrivera/',
-    facebook: 'https://www.facebook.com/patrickxrivera',
-    instagram: '@priv16',
-    twitter: '@priv16',
     email: 'patrick.x.rivera@gmail.com',
-    cell: '(904) 562-0299'
+    cell: '(904) 562-0299',
+    linkedin: 'https://urlgeni.us/linkedin/MAoC',
+    facebook: 'https://urlgeni.us/facebook/Nd1E',
+    instagram: 'https://urlgeni.us/instagram/LGQG',
+    twitter: 'https://urlgeni.us/twitter/E0wt'
   }
 ];
 
