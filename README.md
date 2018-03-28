@@ -6,7 +6,7 @@
 - [ ] Allow user to search by member name and role
 - [ ] Visualize one member
 - [ ] Visualize multiple members at once
-- [ ] Ensure links to social accounts work properly on mobile
+- [ ] Ensure social media accounts are deep linked on mobile
 - [ ] Handle unknown searches gracefully
 - [ ] Spice it up with emoji's
 
