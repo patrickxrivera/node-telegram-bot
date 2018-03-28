@@ -11,7 +11,7 @@ export const getPeopleByRole = (responses, targetRole) => {
 };
 
 const filterByRole = (response, targetRole) =>
-  response.role.includes(targetRole);
+  response.rolecategory.includes(targetRole);
 
 const getName = (response) => response.name.trim();
 

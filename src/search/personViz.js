@@ -13,22 +13,20 @@ const getVizFor = (person) => {
   let result = '';
 
   map(person, (val, key) => {
-    key = toTitleCase(key);
-    if (key !== 'Timestamp' && key !== 'Role') {
-      result += `${key}: ${val}\n\n`;
-    }
+    result += getResult(key, val);
   });
 
-  //
-  // Object.entries(person).forEach((item) => {
-  //   let [key, val] = item;
-  //   key = toTitleCase(key);
-  //   if (key !== 'Timestamp' && key !== 'Role') {
-  //     result += `${key}: ${val}\n\n`;
-  //   }
-  // });
-
   return result;
+};
+
+const getResult = (key, val) => {
+  key = toTitleCase(key);
+
+  if (key !== 'Timestamp' && key !== 'Rolecategory') {
+    return `${key}: ${val}\n\n`;
+  }
+
+  return '';
 };
 
 const toTitleCase = (word) => word[0].toUpperCase() + word.slice(1);

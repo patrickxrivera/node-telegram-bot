@@ -2,8 +2,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T15:50:07.895Z',
     name: 'Shrav Mehta',
-    role: 'Engineer/Marketer',
-    roles: 'Engineering and Marketing',
+    rolecategory: 'Engineer/Marketer',
+    role: 'Engineering and Marketing',
     specialties: 'Aviation, motorcycling, medical tech, marketing',
     learning: 'Lucid dreaming and meditation ',
     linkedin: 'https://www.linkedin.com/in/shravmehta/',
@@ -15,8 +15,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T15:51:43.328Z',
     name: 'Gillian Morris',
-    role: 'Founder',
-    roles: 'CEO/founder at Hitlist',
+    rolecategory: 'Founder',
+    role: 'CEO/founder at Hitlist',
     specialties: 'Travel, communal living',
     learning: 'Battery technology, blockchaib',
     linkedin: 'Linkedin.com/in/gillianim',
@@ -29,8 +29,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T15:55:52.814Z',
     name: 'Ashwin Lalendran',
-    role: 'Engineer/Founder',
-    roles: 'Embedded Software Engineer; Founder',
+    rolecategory: 'Engineer/Founder',
+    role: 'Embedded Software Engineer; Founder',
     specialties: 'Autonomous vehicles (aerial, ground, marine)',
     learning: 'Strategy for venture capital fundrising',
     linkedin: 'https://www.linkedin.com/in/ashwinl/',
@@ -41,8 +41,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T16:21:00.827Z',
     name: 'Jules Walter',
-    role: 'Product Manager',
-    roles: 'Product at Slack',
+    rolecategory: 'Product Manager',
+    role: 'Product at Slack',
     specialties:
       'diversity in tech, nonprofit boards, product, growth, intentional dating',
     learning: 'seed investing, inner workings of vc, nonviolent communication ',
@@ -55,8 +55,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T16:45:00.456Z',
     name: 'Alex Halliday',
-    role: 'Product Manager',
-    roles: 'Product @ MasterClass',
+    rolecategory: 'Product Manager',
+    role: 'Product @ MasterClass',
     specialties:
       'Growth tools, immersive Ed tech, gig economy education, ideation, starting something ',
     learning:
@@ -69,8 +69,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T16:48:05.850Z',
     name: 'Andreas Klinger',
-    role: 'Engineer',
-    roles: 'VPE Coinlist  (prev CTO ProductHunt)',
+    rolecategory: 'Engineer',
+    role: 'VPE Coinlist  (prev CTO ProductHunt)',
     specialties: 'Engineering, Management, Blockchain, Europe Network',
     learning: 'non violent comm',
     facebook: 'Facebook.com/andreasklinger',
@@ -82,8 +82,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T18:24:57.068Z',
     name: 'Michael Lai',
-    role: 'Founder',
-    roles: 'Entrepreneur-in-Residence focused on early childhood development',
+    rolecategory: 'Founder',
+    role: 'Entrepreneur-in-Residence focused on early childhood development',
     specialties:
       'Education, early childhood development, community, books, surfing, evolutionary psychology, recruiting / hiring, growth (sales / marketing / partnerships)',
     learning: 'Diversity & inclusion, HR tech',
@@ -96,8 +96,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T19:28:58.513Z',
     name: 'Artur Meyster',
-    role: 'Engineer/Founder',
-    roles: 'Software Engineer / Founder of Career Karma',
+    rolecategory: 'Engineer/Founder',
+    role: 'Software Engineer / Founder of Career Karma',
     specialties:
       'Educatuon, Mentorship, learning new skills, crypto, fitness, growth hacking',
     learning:
@@ -112,8 +112,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T19:35:47.968Z',
     name: 'Rubén Harris ',
-    role: 'Founder',
-    roles: 'Startup Founder',
+    rolecategory: 'Founder',
+    role: 'Startup Founder',
     specialties:
       'Workforce Development, Education, Barter Economy / Trade, Social Justice, Music, or Martial Arts',
     learning: 'How people would exchange value if money didn’t exist',
@@ -127,8 +127,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T20:47:17.346Z',
     name: 'Terri Burns',
-    role: 'Investor',
-    roles: 'Investor @ GV',
+    rolecategory: 'Investor',
+    role: 'Investor @ GV',
     instagram: 'Tcburning',
     twitter: 'Tcburning',
     email: 'Tcburning@gmail.com'
@@ -136,8 +136,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T21:23:17.493Z',
     name: 'Stacy La',
-    role: 'Designer',
-    roles: 'Director of Design @ Clover Health',
+    rolecategory: 'Designer',
+    role: 'Director of Design @ Clover Health',
     specialties:
       'Any facet of design (interaction, visual, service, operational processes, life :); food, travel, Seattle, music',
     learning:
@@ -152,8 +152,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T22:38:49.974Z',
     name: 'Seth Rosenberg',
-    role: 'Investor',
-    roles: 'VC @ Greylock ',
+    rolecategory: 'Investor',
+    role: 'VC @ Greylock ',
     specialties: 'Start ups',
     instagram: '@sethgrosenberg',
     twitter: '@sethgrosenberg',
@@ -163,8 +163,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-25T23:36:46.281Z',
     name: 'Asher King Abramson',
-    role: 'Marketing',
-    roles: 'Growth marketing @ Bell Curve',
+    rolecategory: 'Marketing',
+    role: 'Growth marketing @ Bell Curve',
     specialties:
       'Avoiding horrible debt decisions, growth marketing, freestyle rapping, harmonizing, books you’re reading',
     learning: 'Stories that last a lifetime ',
@@ -175,8 +175,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T01:02:08.933Z',
     name: 'Luis “Lu” De Castro',
-    role: 'Engineer',
-    roles: 'Software Engineer ',
+    rolecategory: 'Engineer',
+    role: 'Software Engineer ',
     specialties:
       'Motorsports(cars & motorcyles), videography, how to break into tech',
     learning: 'Everything ',
@@ -189,8 +189,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T01:14:03.967Z',
     name: 'Chris Gallello',
-    role: 'Founder',
-    roles: 'Founder @ Purple.pm',
+    rolecategory: 'Founder',
+    role: 'Founder @ Purple.pm',
     specialties:
       'Design, PM, solo foundering, offshore work, remote teams, VR dev/design',
     learning: 'Other fun games for tiny saunas with 9 people in them',
@@ -204,8 +204,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T01:26:00.007Z',
     name: 'Casey Caruso',
-    role: 'Engineer/Investor',
-    roles: 'Partner Tech Manager @ Google / Blockchain Investor',
+    rolecategory: 'Engineer/Investor',
+    role: 'Partner Tech Manager @ Google / Blockchain Investor',
     specialties: 'blockchain, evolution, robotics, psychology, consciousness',
     learning: 'goal-setting, vc, psychology ',
     linkedin: 'https://www.linkedin.com/in/casey-k-caruso/',
@@ -217,8 +217,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T02:57:43.475Z',
     name: 'Laura Thompson ',
-    role: 'Product Manager/Founder/Investor',
-    roles: 'PM at Google x, founder, investor',
+    rolecategory: 'Product Manager/Founder/Investor',
+    role: 'PM at Google x, founder, investor',
     specialties:
       'Crazy innovation, personal finance hacking, social entrepreneurship, social justice, women in tech',
     linkedin: 'LinkedIn.com/lauranicolethompson',
@@ -231,8 +231,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T03:24:26.481Z',
     name: 'Anand Sharma',
-    role: 'Founder',
-    roles: 'Founder @ Gyroscope',
+    rolecategory: 'Founder',
+    role: 'Founder @ Gyroscope',
     specialties: 'Design, health, quantified self, react native',
     learning: 'growth, engineering, life',
     facebook: 'https://facebook.com/aprilzero ',
@@ -244,8 +244,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T03:37:47.423Z',
     name: 'Ina Herlihy',
-    role: 'Product/Investor/Marketing',
-    roles: 'Investor, Product, Growth',
+    rolecategory: 'Product/Investor/Marketing',
+    role: 'Investor, Product, Growth',
     linkedin: 'https://www.linkedin.com/in/inaherlihy/',
     facebook: 'https://www.facebook.com/inaherlihy',
     instagram: 'https://www.instagram.com/inaherlihy/',
@@ -256,8 +256,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T04:43:52.092Z',
     name: 'Shriya Nevatia',
-    role: 'Engineer/Designer',
-    roles: 'UX Engineer @ Glidr.io',
+    rolecategory: 'Engineer/Designer',
+    role: 'UX Engineer @ Glidr.io',
     specialties:
       "- UX Design, UX Research, Product development, Human-Computer Interaction, building User-centric technology\n- Education & the future of learning (Bootcamps, Online ed/MOOCs, competency-based learning / Khan Academy, hands-on learning / Dynamicland / Maker movement, Seymour Papert, more...)\n- Online communities, especially Facebook groups. Some I run include The Future of Learning, First Five Years, Women in Artificial Intelligence & Machine Learning, and (admin) Ladies Storm Hackathons\n- What is (& isn't) the role of Women in Tech orgs in the tech industry\n- Dance (Ballet, Tap, Jazz, Bollywood, Indian Classical, Hip Hop, etc.) and why it's so disconnected to tech while other art forms (music, visual art) have had an explosion of tech enhancements and changes\n- Visual design on paper (magazines, book covers) - awesome books, artistically beautiful paper things -- let's read graphic novels together and discuss their visual style",
     learning:
@@ -272,8 +272,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T04:45:08.704Z',
     name: 'Timur Meyster',
-    role: 'Engineer/Founder',
-    roles: 'Engineer, founder ',
+    rolecategory: 'Engineer/Founder',
+    role: 'Engineer, founder ',
     specialties:
       'Alternative education, blockchain & decentralization, dating life hacks, designing a balanced life, fitness (Muay Thai or juijitsu), self improvement / routines / prioritization strategies',
     learning: 'Building products, Peer networks, scaling blockchains ',
@@ -286,8 +286,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T15:30:13.615Z',
     name: 'Jennifer Kaehms',
-    role: 'Investor',
-    roles: 'Investor with Canvas Ventures',
+    rolecategory: 'Investor',
+    role: 'Investor with Canvas Ventures',
     specialties:
       'Enterprise, Marketplace, Fintech, Emereging Tech, Triathlons, baking sweets, hiking, dogs, life skills, ',
     learning: 'all the things',
@@ -298,8 +298,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T17:16:49.079Z',
     name: 'Sarah Brooks',
-    role: 'Lawyer',
-    roles: 'Startup Law ',
+    rolecategory: 'Lawyer',
+    role: 'Startup Law ',
     specialties:
       'Access to the legal system, blockchain, legal issues for startups',
     learning:
@@ -314,8 +314,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-26T19:01:43.277Z',
     name: 'Raed Khawaja',
-    role: 'Marketing',
-    roles: 'Former @Jyve @Pepsico ',
+    rolecategory: 'Marketing',
+    role: 'Former @Jyve @Pepsico ',
     linkedin: 'http://linkedin.com/in/raed-khawaja-27838327',
     facebook: 'https://www.facebook.com/194308711',
     instagram: 'rraedk ',
@@ -325,8 +325,8 @@ const surveyResponses = [
   {
     timestamp: '2018-03-27T01:18:13.900Z',
     name: 'Shani Taylor',
-    role: 'Marketing',
-    roles: 'Enterprise Customer Success @ Airtable',
+    rolecategory: 'Marketing',
+    role: 'Enterprise Customer Success @ Airtable',
     specialties:
       'Werewolf (jk), music, customer success, Airtable, VC (previously at CCV, Intel Capital), psychology/behavior change',
     learning: ' ',
@@ -339,8 +339,8 @@ const surveyResponses = [
   },
   {
     name: 'Patrick Rivera',
+    rolecategory: 'Engineer',
     role: 'Engineer',
-    roles: 'Engineer',
     specialties:
       'Programming, Design, EdTech, EDM, Consciousness, and Meditation',
     learning:
