@@ -18,3 +18,4 @@
 
 - [ ] Add some dope gifs for responses
 - [ ] Allow user to search by member company and interests
+- [ ] Allow user to add new events and announcements
