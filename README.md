@@ -6,8 +6,10 @@
 - [ ] Allow user to search by member name and role
 - [ ] Visualize one member
 - [ ] Visualize multiple members at once
-- [ ] Ensure links to social accounts work properly on mobile
+- [ ] Ensure social media accounts are deep linked on mobile
+- [ ] Add commands for all social media platforms that links to members accounts
 - [ ] Handle unknown searches gracefully
+- [ ] Display list of commands on open
 - [ ] Spice it up with emoji's
 
 
@@ -16,3 +18,4 @@
 
 - [ ] Add some dope gifs for responses
 - [ ] Allow user to search by member company and interests
+- [ ] Allow user to add new events and announcements
