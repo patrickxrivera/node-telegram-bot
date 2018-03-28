@@ -1,23 +1,4 @@
-import map from 'lodash/map';
-
-export const getPersonViz = (responses, name) => {
-  const targetPerson = getTargetPerson(responses, name);
-  const viz = getVizFor(targetPerson);
-  return viz;
-};
-
-const getTargetPerson = (responses, name) =>
-  responses.filter((response) => response.name === name)[0];
-
-const getVizFor = (person) => {
-  let result = '';
-
-  map(person, (val, key) => {
-    result += getResult(key, val);
-  });
-
-  return result;
-};
+import reduce from 'lodash/reduce';
 
 const links = new Set();
 
@@ -26,18 +7,56 @@ links.add('Facebook');
 links.add('Twitter');
 links.add('Instagram');
 
-const getResult = (key, val) => {
+const emojis = {
+  Role: '\u{1F604}',
+  Specialties: '\u{1F604}',
+  Learning: '\u{1F604}',
+  Linkedin: '\u{1F604}',
+  Facebook: '\u{1F604}',
+  Instagram: '\u{1F604}',
+  Twitter: '\u{1F604}',
+  Email: '\u{1F604}',
+  Cell: '\u{1F604}'
+};
+
+export const getPersonViz = (responses, name) => {
+  const targetPerson = getTargetPerson(responses, name);
+  const viz = concatAttributesFor(targetPerson);
+  return viz;
+};
+
+const getTargetPerson = (responses, name) =>
+  responses.filter((response) => response.name === name)[0];
+
+const concatAttributesFor = (person) => {
+  const viz = reduce(
+    person,
+    (result, val, key) => result + getAttribute(key, val),
+    ''
+  );
+  return viz;
+};
+
+const getAttribute = (key, val) => {
+  if (key === 'timestamp' || key === 'rolecategory') return '';
+  if (key === 'name') return `<strong>${val}</strong>\n\n`;
+
   key = toTitleCase(key);
 
-  if (key !== 'Timestamp' && key !== 'Rolecategory') {
-    if (links.has(key)) {
-      const linkedText = key.link(val);
-      return `${linkedText}\n`;
-    }
-    return `${key}: ${val}\n\n`;
-  }
+  const attribute = links.has(key)
+    ? getLinkAttribute(key, val)
+    : getNonLinkAttribute(key, val);
+  const emoji = emojis[key];
+  const attributeWithEmoji = `${emoji} ${attribute}`;
 
-  return '';
+  return attributeWithEmoji;
 };
+
+const getLinkAttribute = (key, val) => {
+  const linkedText = key.link(val);
+  return `${linkedText}\n`;
+};
+
+const getNonLinkAttribute = (key, val) => `${key}: ${val}\n\n`;
 
 const toTitleCase = (word) => word[0].toUpperCase() + word.slice(1);

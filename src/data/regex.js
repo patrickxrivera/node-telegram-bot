@@ -6,8 +6,9 @@ const getNamesRegex = (responses) => {
   return regex;
 };
 
-const getNames = (responses) =>
-  responses.map((response) => response.name).join('|');
+const getNames = (responses) => responses.map(getName).join('|');
+
+const getName = (response) => response.name;
 
 const namesRegex = getNamesRegex(surveyResponses);
 
