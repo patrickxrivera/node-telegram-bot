@@ -4,6 +4,7 @@ import regex from './data/regex.js';
 import surveyResponses from './data/surveyResponses.js';
 import { getPeopleByRole } from './search/byRole.js';
 import { getSelectedRole } from './utils/helpers.js';
+import { getPersonViz } from './search/personViz.js';
 
 const token = '458016821:AAHPDtnHrIDzRZwtpVqJxOPtJlkmgFnZ2P4';
 const bot = new TelegramBot(token, { polling: true });
@@ -45,4 +46,11 @@ bot.onText(regex.roles, (msg) => {
       keyboard: searchOptions
     }
   });
+});
+
+bot.onText(regex.person, (msg) => {
+  const name = msg.text;
+  const resp = getPersonViz(surveyResponses, name);
+
+  bot.sendMessage(msg.chat.id, resp);
 });
