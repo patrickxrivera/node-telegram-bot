@@ -1,48 +1,16 @@
-import TelegramBot from 'node-telegram-bot-api';
-
+import initBot from './utils/init.js';
 import regex from './data/regex.js';
 import surveyResponses from './data/surveyResponses.js';
+import sendStart from './messages/sendStart.js';
 import sendRole from './messages/sendRole.js';
 import sendMemberCard from './messages/sendMemberCard.js';
 import sendSocialLinks from './messages/sendSocialLinks.js';
 import { getPeopleByRole } from './search/byRole.js';
-import {
-  getIdFrom,
-  getSelectedRole,
-  getSelectedSocialPlatform,
-  config
-} from './utils/helpers.js';
+import { getSelectedRole } from './utils/helpers.js';
 
-const token = '458016821:AAHPDtnHrIDzRZwtpVqJxOPtJlkmgFnZ2P4';
-const bot = new TelegramBot(token, { polling: true });
+const bot = initBot();
 
-bot.onText(regex.start, (msg) => {
-  const name = msg.chat.first_name;
-  const resp = `Welcome, ${name} \u{1F604}
-  \nSearch for a community member from the following options or type your search directly.`;
-  const searchOptions = [
-    ['Engineers', 'Designers', 'Product Managers'],
-    ['Investors', 'Marketers', 'Founders']
-  ];
-
-  bot.sendMessage(msg.chat.id, resp, {
-    reply_markup: {
-      inline_keyboard: [
-        [
-          {
-            text: 'Engineers',
-            callback_data: 'Engineers'
-          },
-          {
-            text: 'Investors',
-            callback_data: 'Investors'
-          }
-        ]
-      ]
-    }
-  });
-});
-
+bot.onText(regex.start, (msg) => sendStart(msg, bot));
 bot.onText(regex.roles, (msg) => sendRole(msg, bot));
 bot.onText(regex.member, (msg) => sendMemberCard(msg, bot));
 bot.onText(regex.social, (msg) => sendSocialLinks(msg, bot));

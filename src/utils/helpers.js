@@ -1,5 +1,7 @@
 export const getIdFrom = (msg) => msg.chat.id;
 
+export const getNameFrom = (msg) => msg.chat.first_name;
+
 export const toTitleCase = (word) => word[0].toUpperCase() + word.slice(1);
 
 export const getSelectedSocialPlatform = (msg) => msg.text.slice(1); // get rid of leading "/"
