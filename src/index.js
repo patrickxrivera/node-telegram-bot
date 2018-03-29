@@ -2,8 +2,9 @@ import TelegramBot from 'node-telegram-bot-api';
 
 import regex from './data/regex.js';
 import surveyResponses from './data/surveyResponses.js';
-import sendSocialLinks from './messages/sendSocialLinks.js';
+import sendRole from './messages/sendRole.js';
 import sendMemberCard from './messages/sendMemberCard.js';
+import sendSocialLinks from './messages/sendSocialLinks.js';
 import { getPeopleByRole } from './search/byRole.js';
 import {
   getIdFrom,
@@ -42,20 +43,7 @@ bot.onText(regex.start, (msg) => {
   });
 });
 
-bot.onText(regex.roles, (msg) => {
-  const id = getIdFrom(msg);
-  const role = getSelectedRole(msg);
-  const text = `Nice! \u{1F64C} ${role}s are pretty awesome. \n\nNow select a person to search`;
-  const peopleByRole = getPeopleByRole(surveyResponses, role);
-  const optns = {
-    reply_markup: {
-      keyboard: peopleByRole
-    }
-  };
-
-  bot.sendMessage(id, text, optns);
-});
-
+bot.onText(regex.roles, (msg) => sendRole(msg, bot));
 bot.onText(regex.member, (msg) => sendMemberCard(msg, bot));
 bot.onText(regex.social, (msg) => sendSocialLinks(msg, bot));
 
