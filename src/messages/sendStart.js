@@ -5,8 +5,7 @@ const sendStart = (msg, bot) => {
   const id = getIdFrom(msg);
   const name = getNameFrom(msg);
   const text = getStartText(name);
-
-  bot.sendMessage(id, text, {
+  const optns = {
     reply_markup: {
       inline_keyboard: [
         [
@@ -21,7 +20,9 @@ const sendStart = (msg, bot) => {
         ]
       ]
     }
-  });
+  };
+
+  bot.sendMessage(id, text, optns);
 };
 
 export default sendStart;

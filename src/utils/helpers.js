@@ -8,7 +8,7 @@ export const getSelectedSocialPlatform = (msg) => msg.text.slice(1); // get rid 
 
 export const config = { parse_mode: 'HTML', disable_web_page_preview: true };
 
-export const getSelectedRole = ({ text }) => {
+export const getSelectedRole = (text) => {
   if (isCommand(text)) {
     text = formatCommand(text);
   }
