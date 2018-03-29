@@ -1,27 +1,20 @@
-export const getPeopleByRole = (responses, targetRole) => {
-  responses = responses.slice(); // don't mutate responses
+import assignInlineFormatTo from '../utils/inlineKeyboard.js';
 
-  const people = responses
+const getMembersByRole = (responses, targetRole) => {
+  responses = responses.slice(); // don't mutate responses
+  const memberNames = filterMembers(responses, targetRole);
+  const formattedMembers = assignInlineFormatTo(memberNames);
+  return formattedMembers;
+};
+
+const filterMembers = (responses, targetRole) =>
+  responses
     .filter((response) => filterByRole(response, targetRole))
     .map(getName);
-
-  const formattedArray = formatArray(people);
-
-  return formattedArray;
-};
 
 const filterByRole = (response, targetRole) =>
   response.rolecategory.includes(targetRole);
 
 const getName = (response) => response.name.trim();
 
-const formatArray = (people) => {
-  let formattedArray = [];
-
-  while (people.length) {
-    const row = people.splice(0, 3);
-    formattedArray = [...formattedArray, row];
-  }
-
-  return formattedArray;
-};
+export default getMembersByRole;

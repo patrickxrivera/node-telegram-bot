@@ -1,19 +1,24 @@
 import surveyResponses from '../data/surveyResponses.js';
-import { getPeopleByRole } from '../search/byRole.js';
+import getMembersByRole from '../search/byRole.js';
 import { getIdFrom, getSelectedRole } from '../utils/helpers.js';
+import { getRoleText } from '../utils/text.js';
 
 const sendRole = (msg, bot) => {
   const id = getIdFrom(msg);
-  const role = getSelectedRole(msg.text);
-  const peopleByRole = getPeopleByRole(surveyResponses, role);
-  const text = `Nice! \u{1F64C} ${role}s are pretty awesome. \n\nNow select a person to search`;
-  const optns = {
-    reply_markup: {
-      keyboard: peopleByRole
-    }
-  };
-
+  const roleData = getRoleDataFrom(msg.text);
+  const { text, reply_markup } = roleData;
+  const optns = { reply_markup };
   bot.sendMessage(id, text, optns);
+};
+
+export const getRoleDataFrom = (req) => {
+  const role = getSelectedRole(req);
+  const text = getRoleText(role);
+  const membersByRole = getMembersByRole(surveyResponses, role);
+  const reply_markup = {
+    inline_keyboard: membersByRole
+  };
+  return { text, reply_markup };
 };
 
 export default sendRole;
