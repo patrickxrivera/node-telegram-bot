@@ -1,13 +1,16 @@
+export const getIdFrom = (msg) => msg.chat.id;
+
 export const toTitleCase = (word) => word[0].toUpperCase() + word.slice(1);
 
 export const getSelectedSocialPlatform = (msg) => msg.text.slice(1); // get rid of leading "/"
 
 export const config = { parse_mode: 'HTML', disable_web_page_preview: true };
 
-export const getSelectedRole = (selection) => {
-  console.log('working');
-  if (isCommand(selection)) selection = formatCommand(selection);
-  const formattedRole = formatRole(selection);
+export const getSelectedRole = ({ text }) => {
+  if (isCommand(text)) {
+    text = formatCommand(text);
+  }
+  const formattedRole = formatRole(text);
   return formattedRole;
 };
 

@@ -4,7 +4,7 @@ import attributes from '../utils/attributes.js';
 import links from '../data/links.js';
 import { toTitleCase } from '../utils/helpers.js';
 
-const getMemberCard = (responses, name) => {
+const getMemberCardFrom = (responses, name) => {
   const targetMember = getTargetMember(responses, name);
   const card = concatAttributesFor(targetMember);
   return card;
@@ -32,4 +32,4 @@ const getAttribute = (key, val) => {
   return formattedCard;
 };
 
-export default getMemberCard;
+export default getMemberCardFrom;

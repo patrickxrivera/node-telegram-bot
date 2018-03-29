@@ -2,10 +2,11 @@ import TelegramBot from 'node-telegram-bot-api';
 
 import regex from './data/regex.js';
 import surveyResponses from './data/surveyResponses.js';
-import getMemberSocialLinksFor from './search/memberSocialLinks';
-import getMemberCard from './search/memberCard.js';
+import sendSocialLinks from './messages/sendSocialLinks.js';
+import sendMemberCard from './messages/sendMemberCard.js';
 import { getPeopleByRole } from './search/byRole.js';
 import {
+  getIdFrom,
   getSelectedRole,
   getSelectedSocialPlatform,
   config
@@ -13,6 +14,50 @@ import {
 
 const token = '458016821:AAHPDtnHrIDzRZwtpVqJxOPtJlkmgFnZ2P4';
 const bot = new TelegramBot(token, { polling: true });
+
+bot.onText(regex.start, (msg) => {
+  const name = msg.chat.first_name;
+  const resp = `Welcome, ${name} \u{1F604}
+  \nSearch for a community member from the following options or type your search directly.`;
+  const searchOptions = [
+    ['Engineers', 'Designers', 'Product Managers'],
+    ['Investors', 'Marketers', 'Founders']
+  ];
+
+  bot.sendMessage(msg.chat.id, resp, {
+    reply_markup: {
+      inline_keyboard: [
+        [
+          {
+            text: 'Engineers',
+            callback_data: 'Engineers'
+          },
+          {
+            text: 'Investors',
+            callback_data: 'Investors'
+          }
+        ]
+      ]
+    }
+  });
+});
+
+bot.onText(regex.roles, (msg) => {
+  const id = getIdFrom(msg);
+  const role = getSelectedRole(msg);
+  const text = `Nice! \u{1F64C} ${role}s are pretty awesome. \n\nNow select a person to search`;
+  const peopleByRole = getPeopleByRole(surveyResponses, role);
+  const optns = {
+    reply_markup: {
+      keyboard: peopleByRole
+    }
+  };
+
+  bot.sendMessage(id, text, optns);
+});
+
+bot.onText(regex.member, (msg) => sendMemberCard(msg, bot));
+bot.onText(regex.social, (msg) => sendSocialLinks(msg, bot));
 
 bot.on('callback_query', (resp) => {
   const role = getSelectedRole(resp.data);
@@ -33,70 +78,5 @@ bot.on('callback_query', (resp) => {
   const { message_id, chat } = resp.message;
   const chat_id = chat.id;
   const optns = { message_id, chat_id, reply_markup };
-  // console.log(optns);
   bot.editMessageText(text, optns);
-  // bot.editMessageText(resp, {
-  //   message_id: resp.message.message_id,
-  //   chat_id: resp.message.chat.id,
-  //   reply_markup: {
-  //     inline_keyboard: [
-  //       [
-  //         {
-  //           text: 'Back',
-  //           callback_data: 'Engineers'
-  //         }
-  //       ]
-  //     ]
-  //   }
-  // });
-});
-
-bot.onText(regex.start, (msg) => {
-  const name = msg.chat.first_name;
-  const resp = `Welcome, ${name} \u{1F604}
-  \nSearch for a community member from the following options or type your search directly.`;
-  const searchOptions = [
-    ['Engineers', 'Designers', 'Product Managers'],
-    ['Investors', 'Marketers', 'Founders']
-  ];
-
-  bot.sendMessage(msg.chat.id, resp, {
-    reply_markup: {
-      inline_keyboard: [
-        [
-          {
-            text: 'Engineers',
-            callback_data: 'Engineers'
-          },
-          { text: 'Investors', callback_data: 'Investors' }
-        ]
-      ]
-    }
-  });
-});
-
-bot.onText(regex.roles, (msg) => {
-  const role = getSelectedRole(msg);
-  const resp = `Nice! \u{1F64C} ${role}s are pretty awesome. \n\nNow select a person to search`;
-  const searchOptions = getPeopleByRole(surveyResponses, role);
-
-  bot.sendMessage(msg.chat.id, resp, {
-    reply_markup: {
-      keyboard: searchOptions
-    }
-  });
-});
-
-bot.onText(regex.person, (msg) => {
-  const name = msg.text;
-  const resp = getMemberCard(surveyResponses, name);
-
-  bot.sendMessage(msg.chat.id, resp, config);
-});
-
-bot.onText(regex.social, (msg) => {
-  const platform = getSelectedSocialPlatform(msg);
-  const resp = getMemberSocialLinksFor(surveyResponses, platform);
-
-  bot.sendMessage(msg.chat.id, resp, config);
 });
