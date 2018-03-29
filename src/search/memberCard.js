@@ -2,15 +2,16 @@ import reduce from 'lodash/reduce';
 
 import attributes from '../utils/attributes.js';
 import links from '../data/links.js';
+import { toTitleCase } from '../utils/helpers.js';
 
-export const getMemberCard = (responses, name) => {
+const getMemberCard = (responses, name) => {
   const targetMember = getTargetMember(responses, name);
   const card = concatAttributesFor(targetMember);
   return card;
 };
 
 const getTargetMember = (responses, name) =>
-  responses.filter((response) => response.name === name)[0];
+  responses.filter((response) => response.name.trim() === name)[0];
 
 const concatAttributesFor = (person) => {
   const card = reduce(
@@ -31,4 +32,4 @@ const getAttribute = (key, val) => {
   return formattedCard;
 };
 
-const toTitleCase = (word) => word[0].toUpperCase() + word.slice(1);
+export default getMemberCard;

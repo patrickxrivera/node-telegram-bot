@@ -8,14 +8,14 @@ const getNamesRegex = (responses) => {
 
 const getNames = (responses) => responses.map(getName).join('|');
 
-const getName = (response) => response.name;
+const getName = (response) => response.name.trim();
 
 const namesRegex = getNamesRegex(surveyResponses);
 
 const regex = {
-  start: /\/start/,
-  role: /By role/,
-  roles: /(Engineers|Designers|Product Managers|Investors|Marketers|Founders)/,
+  start: /(\/start|\/role)/,
+  social: /(\/twitter|\/linkedin|\/instagram|\/facebook)/,
+  roles: /(\/engineers|\/designers|\/product_managers|\/investors|\/marketers|\/founders|Engineers|Designers|Product Managers|Investors|Marketers|Founders)/,
   person: namesRegex
 };
 

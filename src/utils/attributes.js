@@ -10,6 +10,9 @@ const getNonLinkAttribute = ({ key, val }, emoji) =>
 
 const getContactAttribute = ({ val }, emoji) => `${emoji} ${val}\n`;
 
+const getAttributeTitle = (platform, emoji) =>
+  `${emoji} ${platform} accounts for Rise Community members\n\n`;
+
 export const attributes = {
   Timestamp: {
     format: () => ''
@@ -34,19 +37,23 @@ export const attributes = {
   },
   Linkedin: {
     emoji: '\u{23F0}',
-    format: (data) => getLinkAttribute(data, attributes.Linkedin.emoji)
+    format: (data) => getLinkAttribute(data, attributes.Linkedin.emoji),
+    title: (platform) => getAttributeTitle(platform, attributes.Linkedin.emoji)
   },
   Facebook: {
     emoji: '\u{1F441}',
-    format: (data) => getLinkAttribute(data, attributes.Facebook.emoji)
+    format: (data) => getLinkAttribute(data, attributes.Facebook.emoji),
+    title: (platform) => getAttributeTitle(platform, attributes.Facebook.emoji)
   },
   Instagram: {
     emoji: '\u{1F4F8}',
-    format: (data) => getLinkAttribute(data, attributes.Instagram.emoji)
+    format: (data) => getLinkAttribute(data, attributes.Instagram.emoji),
+    title: (platform) => getAttributeTitle(platform, attributes.Instagram.emoji)
   },
   Twitter: {
     emoji: '\u{1F425}',
-    format: (data) => getLinkAttribute(data, attributes.Twitter.emoji)
+    format: (data) => getLinkAttribute(data, attributes.Twitter.emoji),
+    title: (platform) => getAttributeTitle(platform, attributes.Twitter.emoji)
   },
   Email: {
     emoji: '\u{1F4E9}',
