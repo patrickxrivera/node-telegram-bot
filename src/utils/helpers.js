@@ -4,13 +4,10 @@ export const getSelectedSocialPlatform = (msg) => msg.text.slice(1); // get rid 
 
 export const config = { parse_mode: 'HTML', disable_web_page_preview: true };
 
-export const getSelectedRole = (msg) => {
-  let selection = msg.text;
-
+export const getSelectedRole = (selection) => {
+  console.log('working');
   if (isCommand(selection)) selection = formatCommand(selection);
-
   const formattedRole = formatRole(selection);
-
   return formattedRole;
 };
 
