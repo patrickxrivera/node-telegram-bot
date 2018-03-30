@@ -1,9 +1,9 @@
 const roles = [
+  'Marketers',
+  'Designers',
+  'Engineers',
   'Founders',
   'Investors',
-  'Marketers',
-  'Engineers',
-  'Designers',
   'Product Managers'
 ];
 
