@@ -1,14 +1,20 @@
 import getMemberCardFrom from '../search/memberCard.js';
 import surveyResponses from '../data/surveyResponses';
-import { config } from '../utils/helpers.js';
+import { config, getBackBtnFor } from '../utils/helpers.js';
 
 const sendMemberCardCallback = (resp, bot) => {
   const text = getMemberCardFrom(surveyResponses, resp.data);
-  const { message_id, chat } = resp.message;
-  const inline_keyboard = [[{ text: '\u{1F448} Back', callback_data: 'back' }]];
-  const reply_markup = { inline_keyboard };
-  const optns = { message_id, reply_markup, ...config, chat_id: chat.id };
+  const optns = getOptnsFrom(resp);
   bot.editMessageText(text, optns);
+};
+
+const getOptnsFrom = (resp) => {
+  const { message_id, chat } = resp.message;
+  const lastView = 'roles';
+  const backBtn = getBackBtnFor(lastView);
+  const reply_markup = { inline_keyboard: backBtn };
+  const optns = { message_id, reply_markup, ...config, chat_id: chat.id };
+  return optns;
 };
 
 export default sendMemberCardCallback;

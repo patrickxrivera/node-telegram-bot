@@ -15,6 +15,10 @@ export const isMember = (regex, text) =>
 
 export const callbackQuery = 'callback_query';
 
+export const getBackBtnFor = (callback_data) => [
+  [{ text: '\u{1F448} Back', callback_data }]
+];
+
 export const getSelectedRole = (text) => {
   if (isCommand(text)) {
     text = formatCommand(text);

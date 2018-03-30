@@ -1,6 +1,6 @@
 import surveyResponses from '../data/surveyResponses.js';
 import getMembersByRole from '../search/byRole.js';
-import { getIdFrom, getSelectedRole } from '../utils/helpers.js';
+import { getIdFrom, getSelectedRole, getBackBtnFor } from '../utils/helpers.js';
 import { getRoleText } from '../utils/text.js';
 
 const sendRole = (msg, bot) => {
@@ -15,7 +15,8 @@ export const getRoleDataFrom = (req) => {
   const role = getSelectedRole(req);
   const text = getRoleText(role);
   const membersByRole = getMembersByRole(surveyResponses, role);
-  const backBtn = [[{ text: '\u{1F448} Back', callback_data: 'start' }]];
+  const lastView = 'start';
+  const backBtn = getBackBtnFor(lastView);
   const inline_keyboard = [...membersByRole, ...backBtn];
   const reply_markup = { inline_keyboard };
   return { text, reply_markup };
