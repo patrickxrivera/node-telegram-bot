@@ -20,18 +20,29 @@ export const getBackBtnFor = (callback_data) => [
 ];
 
 export const getSelectedRole = (text) => {
-  if (isCommand(text)) {
-    text = formatCommand(text);
+  // TODO make this less shitty
+  switch (true) {
+    case isCommand(text):
+      text = formatCommand(text); // let it pass through
+    default:
+      const formattedRole = formatRole(text);
+      return formattedRole;
   }
-  const formattedRole = formatRole(text);
-  return formattedRole;
 };
+
+const isProductManager = (text) => text === '/product_manager';
 
 const isCommand = (role) => role[0] === '/';
 
-const formatCommand = (role) => {
-  role = role.slice(1);
-  return toTitleCase(role);
+const formatCommand = (command) => {
+  command = command.slice(1); // get rid of leading "/"
+  const formattedCommand = command
+    .split('_')
+    .map(getTitleCase)
+    .join(' ');
+  return formattedCommand;
 };
+
+const getTitleCase = (command) => toTitleCase(command);
 
 const formatRole = (role) => role.slice(0, -1);
