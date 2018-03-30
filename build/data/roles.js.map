@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/data/roles.js"],"names":["roles"],"mappings":";;;;;AAAA,IAAMA,QAAQ,CACZ,WADY,EAEZ,WAFY,EAGZ,WAHY,EAIZ,UAJY,EAKZ,WALY,EAMZ,kBANY,CAAd;;kBASeA,K","file":"roles.js","sourcesContent":["const roles = [\n  'Marketers',\n  'Designers',\n  'Engineers',\n  'Founders',\n  'Investors',\n  'Product Managers'\n];\n\nexport default roles;\n"]}
