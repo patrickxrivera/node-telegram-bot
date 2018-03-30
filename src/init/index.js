@@ -10,6 +10,21 @@ import { callbackQuery } from '../utils/helpers.js';
 
 const token = '570810026:AAGfLBhDak4rlAJztTtygF1kbUhPDYVa7X0';
 
+// export const initBot = () => {
+//   let bot;
+//
+//   if (isProd()) {
+//     bot = new TelegramBot(token);
+//     bot.setWebHook(process.env.HEROKU_URL + bot.token);
+//   } else {
+//     bot = new TelegramBot(token, { polling: true });
+//   }
+//
+//   console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
+//
+//   return bot;
+// };
+
 export const initBot = () => new TelegramBot(token, { polling: true });
 
 export const initActions = (bot) => {
@@ -19,3 +34,5 @@ export const initActions = (bot) => {
   bot.onText(regex.social, (msg) => sendSocialLinks(msg, bot));
   bot.on(callbackQuery, (resp) => handleCallback(resp, bot));
 };
+
+const isProd = () => process.env.NODE_ENV === 'production';
