@@ -8,6 +8,13 @@ export const getSelectedSocialPlatform = (msg) => msg.text.slice(1); // get rid 
 
 export const config = { parse_mode: 'HTML', disable_web_page_preview: true };
 
+export const isRole = (regex, text) => Boolean(text.data.match(regex.roles));
+
+export const isMember = (regex, text) =>
+  Boolean(text.data.match(regex.members));
+
+export const callbackQuery = 'callback_query';
+
 export const getSelectedRole = (text) => {
   if (isCommand(text)) {
     text = formatCommand(text);
