@@ -146,7 +146,7 @@ var surveyResponses = [{
 }, {
   timestamp: '2018-03-25T23:36:46.281Z',
   name: 'Asher King Abramson',
-  rolecategory: 'Marketing',
+  rolecategory: 'Marketer',
   role: 'Growth marketing @ Bell Curve',
   specialties: 'Avoiding horrible debt decisions, growth marketing, freestyle rapping, harmonizing, books you’re reading',
   learning: 'Stories that last a lifetime ',
@@ -217,7 +217,7 @@ var surveyResponses = [{
 }, {
   timestamp: '2018-03-26T03:37:47.423Z',
   name: 'Ina Herlihy',
-  rolecategory: 'Product/Investor/Marketing',
+  rolecategory: 'Product/Investor/Marketer',
   role: 'Investor, Product, Growth',
   linkedin: 'https://urlgeni.us/linkedin/qqjF',
   facebook: 'https://urlgeni.us/facebook/bfYI',
@@ -276,7 +276,7 @@ var surveyResponses = [{
 }, {
   timestamp: '2018-03-26T19:01:43.277Z',
   name: 'Raed Khawaja',
-  rolecategory: 'Marketing',
+  rolecategory: 'Marketer',
   role: 'Former @Jyve @Pepsico ',
   linkedin: 'https://urlgeni.us/linkedin/PW3g',
   facebook: 'https://urlgeni.us/facebook/jKPV',
@@ -286,7 +286,7 @@ var surveyResponses = [{
 }, {
   timestamp: '2018-03-27T01:18:13.900Z',
   name: 'Shani Taylor',
-  rolecategory: 'Marketing',
+  rolecategory: 'Marketer',
   role: 'Enterprise Customer Success @ Airtable',
   specialties: 'Werewolf (jk), music, customer success, Airtable, VC (previously at CCV, Intel Capital), psychology/behavior change',
   learning: ' ',
@@ -299,7 +299,7 @@ var surveyResponses = [{
 }, {
   timestamp: '2018-03-27T01:18:13.900Z',
   name: 'Rolanda Evelyn ',
-  rolecategory: 'Marketing',
+  rolecategory: 'Marketer',
   role: 'Product marketing manager @ Youtube by day// fashion blogger by afternoon (www.leavealittlesparkle.org)// co-founder of other cards by night (www.forothercards.com)',
   specialties: 'All things Fashion- blogs, IG handles to follow, trends; entertainment - movies and tv shows that tell diverse stories',
   learning: 'empathy (how do we build it?// where’d you get it), destigmatizing periods, sex, etc for women ',
@@ -323,7 +323,7 @@ var surveyResponses = [{
 }, {
   timestamp: '2018-03-27T01:18:13.900Z',
   name: 'Raymond Zhong',
-  rolecategory: 'Product Manager/Designer',
+  rolecategory: 'Product Manager/Designer/Engineer',
   role: 'product manager / designer / engineer',
   specialties: 'media design, communities, policy, publishing',
   learning: 'blockchain, dating, psych',
@@ -363,6 +363,8 @@ var surveyResponses = [{
   cell: 5109499383
 }, {
   timestamp: '2018-03-27T01:18:13.900Z',
+  rolecategory: 'Investor',
+  role: 'Investor',
   name: 'Arielle Zuckerberg',
   email: 'Azuckerberg@gmail.com',
   cell: 9143969033
