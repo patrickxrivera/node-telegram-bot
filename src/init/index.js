@@ -8,7 +8,7 @@ import sendSocialLinks from '../messages/sendSocialLinks.js';
 import handleCallback from '../utils/handleCallback.js';
 import { callbackQuery } from '../utils/helpers.js';
 
-const token = '458016821:AAHPDtnHrIDzRZwtpVqJxOPtJlkmgFnZ2P4';
+const token = '570810026:AAGfLBhDak4rlAJztTtygF1kbUhPDYVa7X0';
 
 export const initBot = () => new TelegramBot(token, { polling: true });
 
