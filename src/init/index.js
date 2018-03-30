@@ -13,7 +13,6 @@ const token = '570810026:AAGfLBhDak4rlAJztTtygF1kbUhPDYVa7X0';
 export const initBot = () => new TelegramBot(token, { polling: true });
 
 export const initActions = (bot) => {
-  console.log(bot);
   bot.onText(regex.start, (msg) => sendStart(msg, bot));
   bot.onText(regex.roles, (msg) => sendRole(msg, bot));
   bot.onText(regex.members, (msg) => sendMemberCard(msg, bot));

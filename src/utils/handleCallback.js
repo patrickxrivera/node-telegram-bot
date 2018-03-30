@@ -9,7 +9,7 @@ let lastRole = null; // keep track of where backBtn should point to
 const handleCallback = (resp, bot) => {
   switch (true) {
     case isRole(regex, resp):
-      updateBackBtnConfig(resp);
+      updateBackBtnPointer(resp);
       sendRoleCallback(resp, bot);
       break;
     case isMember(regex, resp):
@@ -31,7 +31,7 @@ const handleBackClick = (resp, bot) => {
   }
 };
 
-const updateBackBtnConfig = ({ data }) => {
+const updateBackBtnPointer = ({ data }) => {
   lastRole = data;
 };
 
