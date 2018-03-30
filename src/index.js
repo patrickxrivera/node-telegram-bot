@@ -1,9 +1,6 @@
 import regex from './data/regex.js';
 import surveyResponses from './data/surveyResponses.js';
 import { initBot, initActions } from './init/';
-import { getPeopleByRole } from './search/byRole.js';
-import { getSelectedRole } from './utils/helpers.js';
-import { getRoleText } from './utils/text.js';
 import { getRoleDataFrom } from './messages/sendRole.js';
 
 const bot = initBot();
