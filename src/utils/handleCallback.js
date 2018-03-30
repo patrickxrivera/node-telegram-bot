@@ -4,19 +4,23 @@ import sendStart from '../messages/sendStart.js';
 import regex from '../data/regex.js';
 import { isRole, isMember } from './helpers.js';
 
+let lastRole = null;
+
 const handleBackClick = (resp, bot) => {
   switch (resp.data) {
     case 'start':
       sendStart(resp.message, bot);
       break;
     default:
-      console.log('REACHED DEFAULT');
+      resp.data = lastRole;
+      sendRoleCallback(resp, bot);
   }
 };
 
 const handleCallback = (resp, bot) => {
   switch (true) {
     case isRole(regex, resp):
+      lastRole = resp.data;
       sendRoleCallback(resp, bot);
       break;
     case isMember(regex, resp):

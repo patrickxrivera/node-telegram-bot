@@ -1,6 +1,6 @@
 import surveyResponses from '../data/surveyResponses.js';
 import getMembersByRole from '../search/byRole.js';
-import { getIdFrom, getSelectedRole, config } from '../utils/helpers.js';
+import { getIdFrom, getSelectedRole } from '../utils/helpers.js';
 import { getRoleText } from '../utils/text.js';
 
 const sendRole = (msg, bot) => {

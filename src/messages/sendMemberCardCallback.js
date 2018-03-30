@@ -5,8 +5,9 @@ import { config } from '../utils/helpers.js';
 const sendMemberCardCallback = (resp, bot) => {
   const text = getMemberCardFrom(surveyResponses, resp.data);
   const { message_id, chat } = resp.message;
-  const chat_id = chat.id;
-  const optns = { message_id, chat_id, ...config };
+  const inline_keyboard = [[{ text: '\u{1F448} Back', callback_data: 'back' }]];
+  const reply_markup = { inline_keyboard };
+  const optns = { message_id, reply_markup, ...config, chat_id: chat.id };
   bot.editMessageText(text, optns);
 };
 
