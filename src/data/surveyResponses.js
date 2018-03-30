@@ -19,10 +19,10 @@ const surveyResponses = [
     role: 'CEO/founder at Hitlist',
     specialties: 'Travel, communal living',
     learning: 'Battery technology, blockchaib',
-    linkedin: 'Linkedin.com/in/gillianim',
-    facebook: 'Facebook.com/gillianemorris',
-    instagram: 'Instagram.com/gillianemorris',
-    twitter: 'Twitter.com/gillianim',
+    linkedin: 'https://urlgeni.us/linkedin/edIe',
+    facebook: 'https://urlgeni.us/facebook/Cv9g',
+    instagram: 'https://urlgeni.us/instagram/GS6u',
+    twitter: 'https://urlgeni.us/twitter/KJ2f',
     email: 'g@hitlistapp.com',
     cell: 2032493384
   },
@@ -33,8 +33,8 @@ const surveyResponses = [
     role: 'Embedded Software Engineer; Founder',
     specialties: 'Autonomous vehicles (aerial, ground, marine)',
     learning: 'Strategy for venture capital fundrising',
-    linkedin: 'https://www.linkedin.com/in/ashwinl/',
-    twitter: 'https://twitter.com/ashwinl',
+    linkedin: 'https://urlgeni.us/linkedin/AI8M',
+    twitter: 'https://urlgeni.us/twitter/fNG0',
     email: 'ashwin@lalendran.com',
     cell: 9379854706
   },
@@ -46,9 +46,9 @@ const surveyResponses = [
     specialties:
       'diversity in tech, nonprofit boards, product, growth, intentional dating',
     learning: 'seed investing, inner workings of vc, nonviolent communication ',
-    linkedin: 'https://www.linkedin.com/in/juleswalter/',
-    facebook: 'https://www.facebook.com/jdwalter',
-    twitter: 'https://twitter.com/julesdwalt',
+    linkedin: 'https://urlgeni.us/linkedin/Jt5G',
+    facebook: 'https://urlgeni.us/facebook/FSmm',
+    twitter: 'https://urlgeni.us/twitter/p6DF',
     email: 'jules.walter@gmail.com',
     cell: '917-371-5180'
   },
@@ -61,8 +61,8 @@ const surveyResponses = [
       'Growth tools, immersive Ed tech, gig economy education, ideation, starting something ',
     learning:
       'Ideation frameworks, blockchain, wellness/wellbeing, investing, relationships ',
-    facebook: '/alhal',
-    twitter: 'Alexhalliday',
+    facebook: 'https://urlgeni.us/facebook/0LMR',
+    twitter: 'https://urlgeni.us/twitter/tQ_r',
     email: 'Amhalliday@gmail.com',
     cell: 4154818364
   },
@@ -73,9 +73,9 @@ const surveyResponses = [
     role: 'VPE Coinlist  (prev CTO ProductHunt)',
     specialties: 'Engineering, Management, Blockchain, Europe Network',
     learning: 'non violent comm',
-    facebook: 'Facebook.com/andreasklinger',
-    instagram: 'Instagram.com/andreasklinger',
-    twitter: 'Twitter.com/andreasklinger',
+    facebook: 'https://urlgeni.us/facebook/zbZv',
+    instagram: 'https://urlgeni.us/instagram/F1XL',
+    twitter: 'https://urlgeni.us/twitter/RwBW',
     email: 'andreas@klinger.io',
     cell: 4155280378
   },
@@ -87,9 +87,9 @@ const surveyResponses = [
     specialties:
       'Education, early childhood development, community, books, surfing, evolutionary psychology, recruiting / hiring, growth (sales / marketing / partnerships)',
     learning: 'Diversity & inclusion, HR tech',
-    linkedin: 'Www.linkedin.com/in/michaellai7',
-    facebook: 'Www.facebook.com/michaeltclai',
-    twitter: '@mtclai',
+    linkedin: 'https://urlgeni.us/linkedin/4aGM',
+    facebook: 'https://urlgeni.us/facebook/wame',
+    twitter: 'https://urlgeni.us/twitter/f11K',
     email: 'michaeltclai@gmail.com',
     cell: 9092860198
   },
@@ -102,10 +102,10 @@ const surveyResponses = [
       'Educatuon, Mentorship, learning new skills, crypto, fitness, growth hacking',
     learning:
       'Building engineering teams, crypto, empathy, building strong relationships, purpose of life...',
-    linkedin: 'https://www.linkedin.com/in/meyster',
-    facebook: 'https://m.facebook.com/meyster',
-    instagram: 'https://www.instagram.com/ameyster/',
-    twitter: 'https://twitter.com/arturmeyster',
+    linkedin: 'https://urlgeni.us/linkedin/ctrC',
+    facebook: 'https://urlgeni.us/facebook/_Knh',
+    instagram: 'https://urlgeni.us/instagram/zCGp',
+    twitter: 'https://urlgeni.us/twitter/jN2V',
     email: 'Meyster.artur@gmail.com',
     cell: 6463610938
   },
@@ -117,10 +117,10 @@ const surveyResponses = [
     specialties:
       'Workforce Development, Education, Barter Economy / Trade, Social Justice, Music, or Martial Arts',
     learning: 'How people would exchange value if money didn’t exist',
-    linkedin: 'LinkedIn.com/in/rubenharris',
-    facebook: 'Facebook.com/rubenharris ',
-    instagram: '@rubenharris',
-    twitter: '@rubenharris',
+    linkedin: 'https://urlgeni.us/linkedin/LlVl',
+    facebook: 'https://urlgeni.us/facebook/oUo7',
+    instagram: 'https://urlgeni.us/instagram/ilzU',
+    twitter: 'https://urlgeni.us/twitter/3grF',
     email: 'Ruben.x.harris@gmail.com',
     cell: 6784670123
   },
@@ -129,8 +129,8 @@ const surveyResponses = [
     name: 'Terri Burns',
     rolecategory: 'Investor',
     role: 'Investor @ GV',
-    instagram: 'Tcburning',
-    twitter: 'Tcburning',
+    instagram: 'https://urlgeni.us/instagram/zfyB',
+    twitter: 'https://urlgeni.us/twitter/XUei',
     email: 'Tcburning@gmail.com'
   },
   {
@@ -142,10 +142,10 @@ const surveyResponses = [
       'Any facet of design (interaction, visual, service, operational processes, life :); food, travel, Seattle, music',
     learning:
       "Building profitable businesses where design is core, career coaching, YOU (my favorite parts of Rise was getting to know other people's backgrounds and stories)",
-    linkedin: 'linkedin.com/in/stacyla',
-    facebook: 'facebook.com/staserz',
-    instagram: '@staserz',
-    twitter: '@staserz',
+    linkedin: 'https://urlgeni.us/linkedin/sdtb',
+    facebook: 'https://urlgeni.us/facebook/lOhz',
+    instagram: 'https://urlgeni.us/instagram/UA06',
+    twitter: 'https://urlgeni.us/twitter/3whV',
     email: 'stacy.h.la@gmail.com',
     cell: '206-753-7160'
   },
@@ -155,21 +155,21 @@ const surveyResponses = [
     rolecategory: 'Investor',
     role: 'VC @ Greylock ',
     specialties: 'Start ups',
-    instagram: '@sethgrosenberg',
-    twitter: '@sethgrosenberg',
+    instagram: 'https://urlgeni.us/instagram/NDRN',
+    twitter: 'https://urlgeni.us/twitter/ir4w',
     email: 'sethgrosenberg@gmail.com',
     cell: 9173401556
   },
   {
     timestamp: '2018-03-25T23:36:46.281Z',
     name: 'Asher King Abramson',
-    rolecategory: 'Marketing',
+    rolecategory: 'Marketer',
     role: 'Growth marketing @ Bell Curve',
     specialties:
       'Avoiding horrible debt decisions, growth marketing, freestyle rapping, harmonizing, books you’re reading',
     learning: 'Stories that last a lifetime ',
-    linkedin: 'https://www.linkedin.com/in/akingabramson',
-    twitter: '@akingabramson',
+    linkedin: 'https://urlgeni.us/linkedin/W21w',
+    twitter: 'https://urlgeni.us/twitter/KJfV',
     email: 'A.Kingabramson@gmail.com'
   },
   {
@@ -180,9 +180,9 @@ const surveyResponses = [
     specialties:
       'Motorsports(cars & motorcyles), videography, how to break into tech',
     learning: 'Everything ',
-    linkedin: '/holixsf',
-    facebook: '/holixsf',
-    instagram: '@holixsf',
+    linkedin: 'https://urlgeni.us/linkedin/pIzm',
+    facebook: 'https://urlgeni.us/facebook/kxy6',
+    instagram: 'https://urlgeni.us/instagram/rgOO',
     email: 'luisdecastro510@gmail.com',
     cell: 16508924274
   },
@@ -194,10 +194,10 @@ const surveyResponses = [
     specialties:
       'Design, PM, solo foundering, offshore work, remote teams, VR dev/design',
     learning: 'Other fun games for tiny saunas with 9 people in them',
-    linkedin: 'https://www.linkedin.com/in/chrisgallello/',
-    facebook: 'https://www.facebook.com/cgallello',
-    instagram: 'https://www.instagram.com/cgallello/',
-    twitter: 'https://twitter.com/cgallello',
+    linkedin: 'https://urlgeni.us/linkedin/WKoH',
+    facebook: 'https://urlgeni.us/facebook/QTz3',
+    instagram: 'https://urlgeni.us/instagram/pybC',
+    twitter: 'https://urlgeni.us/twitter/erAf',
     email: 'chris@purple.pm',
     cell: 7327319298
   },
@@ -208,9 +208,9 @@ const surveyResponses = [
     role: 'Partner Tech Manager @ Google / Blockchain Investor',
     specialties: 'blockchain, evolution, robotics, psychology, consciousness',
     learning: 'goal-setting, vc, psychology ',
-    linkedin: 'https://www.linkedin.com/in/casey-k-caruso/',
-    facebook: 'https://www.facebook.com/',
-    twitter: 'https://twitter.com/caseykcaruso',
+    linkedin: 'https://urlgeni.us/linkedin/fS1F',
+    facebook: 'https://urlgeni.us/facebook/z2xy',
+    twitter: 'https://urlgeni.us/twitter/c9MG',
     email: 'caseykcaruso@gmail.com',
     cell: '203-520-7805'
   },
@@ -221,10 +221,10 @@ const surveyResponses = [
     role: 'PM at Google x, founder, investor',
     specialties:
       'Crazy innovation, personal finance hacking, social entrepreneurship, social justice, women in tech',
-    linkedin: 'LinkedIn.com/lauranicolethompson',
-    facebook: 'Facebook.com/lauranicolethompson',
-    instagram: 'Instagram.com/lauranthom',
-    twitter: 'Twitter.com/lauranthompson',
+    linkedin: 'https://urlgeni.us/linkedin/P52g',
+    facebook: 'https://urlgeni.us/facebook/Zftc',
+    instagram: 'https://urlgeni.us/instagram/Vk7u',
+    twitter: 'https://urlgeni.us/twitter/zJZU',
     email: 'Lauranicolethompson@gmail.com',
     cell: 8476875087
   },
@@ -235,21 +235,21 @@ const surveyResponses = [
     role: 'Founder @ Gyroscope',
     specialties: 'Design, health, quantified self, react native',
     learning: 'growth, engineering, life',
-    facebook: 'https://facebook.com/aprilzero ',
-    instagram: 'https://instagram.com/aprilzero',
-    twitter: 'https://twitter.com/aprilzero',
+    facebook: 'https://urlgeni.us/facebook/MXCl',
+    instagram: 'https://urlgeni.us/instagram/B4yb',
+    twitter: 'https://urlgeni.us/twitter/KIUP',
     email: 'anand@aprilzero.com',
     cell: 8187263467
   },
   {
     timestamp: '2018-03-26T03:37:47.423Z',
     name: 'Ina Herlihy',
-    rolecategory: 'Product/Investor/Marketing',
+    rolecategory: 'Product/Investor/Marketer',
     role: 'Investor, Product, Growth',
-    linkedin: 'https://www.linkedin.com/in/inaherlihy/',
-    facebook: 'https://www.facebook.com/inaherlihy',
-    instagram: 'https://www.instagram.com/inaherlihy/',
-    twitter: 'https://twitter.com/inaherlihy',
+    linkedin: 'https://urlgeni.us/linkedin/qqjF',
+    facebook: 'https://urlgeni.us/facebook/bfYI',
+    instagram: 'https://urlgeni.us/instagram/4G6l',
+    twitter: 'https://urlgeni.us/twitter/Nc4Q',
     email: 'inacatherine@gmail.com',
     cell: '415-272-7274'
   },
@@ -262,10 +262,10 @@ const surveyResponses = [
       "- UX Design, UX Research, Product development, Human-Computer Interaction, building User-centric technology\n- Education & the future of learning (Bootcamps, Online ed/MOOCs, competency-based learning / Khan Academy, hands-on learning / Dynamicland / Maker movement, Seymour Papert, more...)\n- Online communities, especially Facebook groups. Some I run include The Future of Learning, First Five Years, Women in Artificial Intelligence & Machine Learning, and (admin) Ladies Storm Hackathons\n- What is (& isn't) the role of Women in Tech orgs in the tech industry\n- Dance (Ballet, Tap, Jazz, Bollywood, Indian Classical, Hip Hop, etc.) and why it's so disconnected to tech while other art forms (music, visual art) have had an explosion of tech enhancements and changes\n- Visual design on paper (magazines, book covers) - awesome books, artistically beautiful paper things -- let's read graphic novels together and discuss their visual style",
     learning:
       "- How & why to be a great Front-End Engineer, UX Designer, and/or Product Manager\n- Starting a startup that begins as a community\n- Finding co-founders for your startup who complement your skills & who will actually contribute meaningfully\n- Finding a way to monetize ideas that don't seem easy to monetize\n- How to start advising startups & what you can learn from this experience\n- Growing a huge community without burning out\n- Growing your own network / mentoring / giving back without burning out \n- Creating a media product on the side while keeping your full-time job...without burning out (podcast? blog?)\n- Tech recruiting industry & HR & how to help people find or create awesome jobs\n- The history & future of artificial intelligence (learning from our mistakes in the past, or not)",
-    linkedin: 'https://www.linkedin.com/in/shriyanevatia',
-    facebook: 'https://www.facebook.com/snevatia',
-    instagram: 'http://instagram.com/shriyakn',
-    twitter: 'https://twitter.com/shriyanevatia',
+    linkedin: 'https://urlgeni.us/linkedin/vXAz',
+    facebook: 'https://urlgeni.us/facebook/lVYb',
+    instagram: 'https://urlgeni.us/instagram/qNVs',
+    twitter: 'https://urlgeni.us/twitter/HgrI',
     email: 'sneva831@gmail.com',
     cell: 5183388505
   },
@@ -277,9 +277,9 @@ const surveyResponses = [
     specialties:
       'Alternative education, blockchain & decentralization, dating life hacks, designing a balanced life, fitness (Muay Thai or juijitsu), self improvement / routines / prioritization strategies',
     learning: 'Building products, Peer networks, scaling blockchains ',
-    facebook: 'https://www.facebook.com/1460447896',
-    instagram: 'https://www.instagram.com/timurm',
-    twitter: 'Twitter.com/timurmeyster',
+    facebook: 'https://urlgeni.us/facebook/PnTb',
+    instagram: 'https://urlgeni.us/instagram/N_Pg',
+    twitter: 'https://urlgeni.us/twitter/Yqlt',
     email: 'timur.meyster@gmail.com',
     cell: 7187047440
   },
@@ -291,9 +291,9 @@ const surveyResponses = [
     specialties:
       'Enterprise, Marketplace, Fintech, Emereging Tech, Triathlons, baking sweets, hiking, dogs, life skills, ',
     learning: 'all the things',
-    linkedin: 'https://www.linkedin.com/in/jkaehms/',
-    facebook: 'https://www.facebook.com/jennykaehms',
-    twitter: 'https://twitter.com/jennykaehms?lang=en'
+    linkedin: 'https://urlgeni.us/linkedin/qVgT',
+    facebook: 'https://urlgeni.us/facebook/11nP',
+    twitter: 'https://urlgeni.us/twitter/eXU6'
   },
   {
     timestamp: '2018-03-26T17:16:49.079Z',
@@ -304,43 +304,87 @@ const surveyResponses = [
       'Access to the legal system, blockchain, legal issues for startups',
     learning:
       'Self-improvement & mindfulness, investing, best adventure travel spots',
-    linkedin: 'sarahbrooks3',
-    facebook: 'Ssbrooks',
-    instagram: 'ssbrooks',
-    twitter: '@Ssbrooks5',
+    linkedin: 'https://urlgeni.us/linkedin/vQTi',
+    facebook: 'https://urlgeni.us/facebook/L53R',
+    instagram: 'https://urlgeni.us/instagram/kJIE',
+    twitter: 'https://urlgeni.us/twitter/P8AX',
     email: 'ssbrooks5@gmail.com',
     cell: 9126602890
   },
   {
     timestamp: '2018-03-26T19:01:43.277Z',
     name: 'Raed Khawaja',
-    rolecategory: 'Marketing',
+    rolecategory: 'Marketer',
     role: 'Former @Jyve @Pepsico ',
-    linkedin: 'http://linkedin.com/in/raed-khawaja-27838327',
-    facebook: 'https://www.facebook.com/194308711',
-    instagram: 'rraedk ',
+    linkedin: 'https://urlgeni.us/linkedin/PW3g',
+    facebook: 'https://urlgeni.us/facebook/jKPV',
+    instagram: 'https://urlgeni.us/instagram/JxaZ',
     email: 'raed.khawaja@gmail.com',
     cell: 6302343396
   },
   {
     timestamp: '2018-03-27T01:18:13.900Z',
     name: 'Shani Taylor',
-    rolecategory: 'Marketing',
+    rolecategory: 'Marketer',
     role: 'Enterprise Customer Success @ Airtable',
     specialties:
       'Werewolf (jk), music, customer success, Airtable, VC (previously at CCV, Intel Capital), psychology/behavior change',
     learning: ' ',
-    linkedin: 'https://www.linkedin.com/in/shanictaylor',
-    facebook: 'https://www.facebook.com/shani.c.taylor',
-    instagram: '@helloshani',
-    twitter: '@shanictaylor',
+    linkedin: 'https://urlgeni.us/linkedin/P2n0',
+    facebook: 'https://urlgeni.us/facebook/X0Fd',
+    instagram: 'https://urlgeni.us/instagram/xlLz',
+    twitter: 'https://urlgeni.us/twitter/vis3',
     email: 'shani.c.taylor@gmail.com',
     cell: 2403050064
   },
   {
+    timestamp: '2018-03-27T01:18:13.900Z',
+    name: 'Rolanda Evelyn ',
+    rolecategory: 'Marketer',
+    role:
+      'Product marketing manager @ Youtube by day// fashion blogger by afternoon (www.leavealittlesparkle.org)// co-founder of other cards by night (www.forothercards.com)',
+    specialties:
+      'All things Fashion- blogs, IG handles to follow, trends; entertainment - movies and tv shows that tell diverse stories',
+    learning:
+      'empathy (how do we build it?// where’d you get it), destigmatizing periods, sex, etc for women ',
+    linkedin: 'https://urlgeni.us/linkedin/LGzD',
+    facebook: 'https://urlgeni.us/facebook/qcTB',
+    instagram: 'https://urlgeni.us/instagram/_vR0',
+    email: 'rolanda.evelyn@gmail.com',
+    cell: 7187376308
+  },
+  {
+    timestamp: '2018-03-27T01:18:13.900Z',
+    name: 'Randa Sakallah',
+    rolecategory: 'Investor',
+    role: 'Deal team at AngelList',
+    specialties:
+      'Investing, surfing, mental health, identity/privilege, meditation, consciousness, yoga, rap, music industry, literature, cooking, dating',
+    learning:
+      'everything listed before, blockchain/crypto, microdosing, personal finance, impact investing, music production, writing/creative process ',
+    linkedin: 'https://urlgeni.us/linkedin/xBuG',
+    facebook: 'https://urlgeni.us/facebook/elLF',
+    twitter: 'https://urlgeni.us/twitter/BXm3',
+    email: 'rsakallah@gmail.com',
+    cell: 7348467832
+  },
+  {
+    timestamp: '2018-03-27T01:18:13.900Z',
+    name: 'Raymond Zhong',
+    rolecategory: 'Product Manager/Designer/Engineer',
+    role: 'product manager / designer / engineer',
+    specialties: 'media design, communities, policy, publishing',
+    learning: 'blockchain, dating, psych',
+    linkedin: 'https://urlgeni.us/linkedin/M62O',
+    facebook: 'https://urlgeni.us/facebook/oRK1',
+    twitter: 'https://urlgeni.us/twitter/BrcF',
+    email: 'raykyri@gmail.com'
+  },
+  {
+    timestamp: '2018-03-27T01:18:13.900Z',
     name: 'Patrick Rivera',
     rolecategory: 'Engineer',
-    role: 'Engineer',
+    role: 'College student/Software Engineer',
     specialties:
       'Programming, Design, EdTech, EDM, Consciousness, and Meditation',
     learning:
@@ -351,6 +395,35 @@ const surveyResponses = [
     twitter: 'https://urlgeni.us/twitter/E0wt',
     email: 'patrick.x.rivera@gmail.com',
     cell: '(904) 562-0299'
+  },
+  {
+    timestamp: '2018-03-27T01:18:13.900Z',
+    name: 'Chantalle Dumonceaux',
+    rolecategory: 'Investor',
+    role: 'Investor',
+    specialties: 'Whatever they want',
+    email: 'chantalle@outlook.com',
+    cell: 3107172525
+  },
+  {
+    timestamp: '2018-03-27T01:18:13.900Z',
+    name: ' Nancy Douyon',
+    rolecategory: 'Designer',
+    role: 'UX research',
+    specialties:
+      'Distortion versus reality in personal growth; Scaling globally research practices ',
+    learning:
+      "Asking for help, speaking in a way that isn't lecture, how to stop beating yourself up, ",
+    email: 'nancydouyon@gmail.com ',
+    cell: 5109499383
+  },
+  {
+    timestamp: '2018-03-27T01:18:13.900Z',
+    rolecategory: 'Investor',
+    role: 'Investor',
+    name: 'Arielle Zuckerberg',
+    email: 'Azuckerberg@gmail.com',
+    cell: 9143969033
   }
 ];
 
