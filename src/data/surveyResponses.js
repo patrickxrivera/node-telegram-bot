@@ -6,9 +6,9 @@ const surveyResponses = [
     role: 'Engineering and Marketing',
     specialties: 'Aviation, motorcycling, medical tech, marketing',
     learning: 'Lucid dreaming and meditation ',
-    linkedin: 'https://www.linkedin.com/in/shravmehta/',
-    facebook: 'https://www.facebook.com/100000078227649',
-    twitter: 'https://twitter.com/shravvmehtaa',
+    linkedin: 'https://urlgeni.us/linkedin/n5Pf',
+    facebook: 'https://urlgeni.us/facebook/nRDZ',
+    twitter: 'https://urlgeni.us/twitter/MnhR',
     email: 'shravvmehtaa@gmail.com',
     cell: 4084100962
   },
