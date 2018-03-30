@@ -16,6 +16,7 @@ const regex = {
   start: /(\/start|\/role)/,
   social: /(\/twitter|\/linkedin|\/instagram|\/facebook)/,
   roles: /(\/engineers|\/designers|\/product_managers|\/investors|\/marketers|\/founders|Engineers|Designers|Product Managers|Investors|Marketers|Founders)/,
+  back: /Back/,
   members: membersRegex
 };
 

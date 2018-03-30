@@ -15,9 +15,9 @@ export const getRoleDataFrom = (req) => {
   const role = getSelectedRole(req);
   const text = getRoleText(role);
   const membersByRole = getMembersByRole(surveyResponses, role);
-  const reply_markup = {
-    inline_keyboard: membersByRole
-  };
+  const backBtn = [[{ text: 'Back', callback_data: 'start' }]];
+  const inline_keyboard = [...membersByRole, ...backBtn];
+  const reply_markup = { inline_keyboard };
   return { text, reply_markup };
 };
 
