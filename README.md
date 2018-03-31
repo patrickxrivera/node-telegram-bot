@@ -1,4 +1,4 @@
-# rise-fam-telegram-bot
+# telegram-bot-for-rise-community
 
 # MVP List
 
