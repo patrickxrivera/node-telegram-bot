@@ -11,7 +11,7 @@
 - [x] Spice it up with emoji's
 - [x] Deploy to a hosted server
 
-# Future Roadmap
+# Roadmap
 
 - [ ] Keep response time high even when bot has been idle for extended period of time
 - [ ] Display a back button when user searches with "/social" commands
