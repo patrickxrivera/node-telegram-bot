@@ -13,6 +13,7 @@
 
 # Future Roadmap
 
+- [ ] Keep response time high even when bot has been idle for extended period of time
 - [ ] Display a back button when user searches with "/social" commands
 - [ ] Render all commands when an unknown query is received
 - [ ] Create a "/rando" command that renders a random community member
