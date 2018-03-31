@@ -21,8 +21,6 @@ var initBot = function initBot() {
     bot = new _nodeTelegramBotApi2.default(token, { polling: true });
   }
 
-  console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
-
   return bot;
 };
 

@@ -11,8 +11,6 @@ const initBot = () => {
     bot = new TelegramBot(token, { polling: true });
   }
 
-  console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
-
   return bot;
 };
 
