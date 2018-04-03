@@ -4,36 +4,43 @@ const initBot = () => (isProdEnv() ? Prod.init() : Dev.init());
 
 const isProdEnv = () => process.env.NODE_ENV === 'production';
 
-export const Bot = {
+const BotSettings = {
   token: null,
-  setToken(token) {
-    this.token = process.env[token];
-  }
-};
+  bot: null,
 
-export const Dev = {
-  init() {
-    this.setToken('DEV_TOKEN');
-    this.setupBot();
-    return this.bot;
+  setToken(tokenType) {
+    this.token = process.env[tokenType];
   },
-  setupBot() {
-    this.bot = new TelegramBot(this.token, { polling: true });
+
+  setBot(optns) {
+    this.bot = new TelegramBot(this.token, optns);
   }
 };
 
-export const Prod = {
+const Prod = {
+  tokenType: 'PROD_TOKEN',
+
   init() {
-    this.setToken('PROD_TOKEN');
-    this.setupBot();
+    this.setToken(this.tokenType);
+    this.setBot();
     return this.bot;
-  },
-  setupBot() {
-    this.bot.setWebHook(process.env.HEROKU_URL + this.token);
   }
 };
 
-Object.setPrototypeOf(Dev, Bot);
-Object.setPrototypeOf(Prod, Bot);
+const Dev = {
+  tokenType: 'DEV_TOKEN',
+  optns: {
+    polling: true
+  },
+
+  init() {
+    this.setToken(this.tokenType);
+    this.setBot(this.optns);
+    return this.bot;
+  }
+};
+
+Object.setPrototypeOf(Dev, BotSettings);
+Object.setPrototypeOf(Prod, BotSettings);
 
 export default initBot;
