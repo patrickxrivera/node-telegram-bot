@@ -33,7 +33,7 @@ var BotSettings = {
 };
 
 var Prod = {
-  tokenType: 'PROD_TOKEN',
+  tokenType: 'TOKEN',
 
   init: function init() {
     this.setToken(this.tokenType);

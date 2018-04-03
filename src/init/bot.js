@@ -18,7 +18,7 @@ const BotSettings = {
 };
 
 const Prod = {
-  tokenType: 'PROD_TOKEN',
+  tokenType: 'TOKEN',
 
   init() {
     this.setToken(this.tokenType);
