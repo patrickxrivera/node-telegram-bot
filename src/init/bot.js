@@ -1,20 +1,39 @@
 import TelegramBot from 'node-telegram-bot-api';
 
-const initBot = () => (isProdEnv() ? setProdBot() : setDevBot());
+const initBot = () => (isProdEnv() ? Prod.init() : Dev.init());
 
 const isProdEnv = () => process.env.NODE_ENV === 'production';
 
-const setProdBot = () => {
-  const token = process.env.TOKEN;
-  const bot = new TelegramBot(token);
-  bot.setWebHook(process.env.HEROKU_URL + bot.token);
-  return bot;
+export const Bot = {
+  token: null,
+  setToken(token) {
+    this.token = process.env[token];
+  }
 };
 
-const setDevBot = () => {
-  const token = process.env.DEV_TOKEN;
-  const bot = new TelegramBot(token, { polling: true });
-  return bot;
+export const Dev = {
+  init() {
+    this.setToken('DEV_TOKEN');
+    this.setupBot();
+    return this.bot;
+  },
+  setupBot() {
+    this.bot = new TelegramBot(this.token, { polling: true });
+  }
 };
+
+export const Prod = {
+  init() {
+    this.setToken('PROD_TOKEN');
+    this.setupBot();
+    return this.bot;
+  },
+  setupBot() {
+    this.bot.setWebHook(process.env.HEROKU_URL + this.token);
+  }
+};
+
+Object.setPrototypeOf(Dev, Bot);
+Object.setPrototypeOf(Prod, Bot);
 
 export default initBot;
