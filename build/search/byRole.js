@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.filterMembers = undefined;
 
 var _inlineKeyboard = require('../utils/inlineKeyboard.js');
 
@@ -17,10 +18,10 @@ var getMembersByRole = function getMembersByRole(responses, targetRole) {
   return formattedMembers;
 };
 
-var filterMembers = function filterMembers(responses, targetRole) {
+var filterMembers = exports.filterMembers = function filterMembers(responses, targetRole) {
   return responses.filter(function (response) {
     return filterByRole(response, targetRole);
-  }).map(getName);
+  }).map(getName).sort();
 };
 
 var filterByRole = function filterByRole(response, targetRole) {
