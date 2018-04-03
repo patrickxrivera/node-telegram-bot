@@ -28,7 +28,7 @@ const Prod = {
 };
 
 const Dev = {
-  tokenType: 'DEV_TOKEN',
+  tokenType: 'TOKEN_DEV',
   optns: {
     polling: true
   },

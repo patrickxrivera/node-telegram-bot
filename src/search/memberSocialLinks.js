@@ -11,7 +11,9 @@ const getTitleFor = (platform) => {
 };
 
 const getMemberSocialLinksFor = (responses, platform) => {
-  const validLinks = responses.filter((response) => response[platform]);
+  const validLinks = responses
+    .filter((response) => response[platform])
+    .sort(byName);
   const title = getTitleFor(platform);
   const formattedLinks = reduce(
     validLinks,
@@ -20,6 +22,8 @@ const getMemberSocialLinksFor = (responses, platform) => {
   );
   return formattedLinks;
 };
+
+const byName = (a, b) => (a.name < b.name ? -1 : 1);
 
 const formatLinks = (acc, curr, platform) => {
   const link = curr[platform];
