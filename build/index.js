@@ -31,7 +31,7 @@ var bot = (0, _bot2.default)();
 
 // Keep Heroku server from idling
 
-var appUrl = 'https://glacial-fortress-97853.herokuapp.com/';
+var appUrl = 'http://glacial-fortress-97853.herokuapp.com/';
 var fiveMinutes = 300000;
 
 setInterval(function () {
