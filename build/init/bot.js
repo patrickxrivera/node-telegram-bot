@@ -19,7 +19,8 @@ var isProdEnv = function isProdEnv() {
 };
 
 var setProdBot = function setProdBot() {
-  var token = process.env.PROD_TOKEN;
+  var token = process.env.TOKEN;
+  console.log(token);
   var bot = new _nodeTelegramBotApi2.default(token);
   bot.setWebHook(process.env.HEROKU_URL + bot.token);
   return bot;
