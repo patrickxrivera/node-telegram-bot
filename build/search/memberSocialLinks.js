@@ -24,12 +24,16 @@ var getTitleFor = function getTitleFor(platform) {
 var getMemberSocialLinksFor = function getMemberSocialLinksFor(responses, platform) {
   var validLinks = responses.filter(function (response) {
     return response[platform];
-  });
+  }).sort(byName);
   var title = getTitleFor(platform);
   var formattedLinks = (0, _reduce2.default)(validLinks, function (acc, curr) {
     return formatLinks(acc, curr, platform);
   }, title);
   return formattedLinks;
+};
+
+var byName = function byName(a, b) {
+  return a.name < b.name ? -1 : 1;
 };
 
 var formatLinks = function formatLinks(acc, curr, platform) {

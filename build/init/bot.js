@@ -43,7 +43,7 @@ var Prod = {
 };
 
 var Dev = {
-  tokenType: 'DEV_TOKEN',
+  tokenType: 'TOKEN_DEV',
   optns: {
     polling: true
   },
