@@ -43,8 +43,7 @@ const surveyResponses = [
     name: 'Jules Walter',
     rolecategory: 'Product Manager',
     role: 'Product at Slack',
-    specialties:
-      'diversity in tech, nonprofit boards, product, growth, intentional dating',
+    specialties: 'diversity in tech, nonprofit boards, product, growth, intentional dating',
     learning: 'seed investing, inner workings of vc, nonviolent communication ',
     linkedin: 'https://urlgeni.us/linkedin/Jt5G',
     facebook: 'https://urlgeni.us/facebook/FSmm',
@@ -59,8 +58,7 @@ const surveyResponses = [
     role: 'Product @ MasterClass',
     specialties:
       'Growth tools, immersive Ed tech, gig economy education, ideation, starting something ',
-    learning:
-      'Ideation frameworks, blockchain, wellness/wellbeing, investing, relationships ',
+    learning: 'Ideation frameworks, blockchain, wellness/wellbeing, investing, relationships ',
     facebook: 'https://urlgeni.us/facebook/0LMR',
     twitter: 'https://urlgeni.us/twitter/tQ_r',
     email: 'Amhalliday@gmail.com',
@@ -98,8 +96,7 @@ const surveyResponses = [
     name: 'Artur Meyster',
     rolecategory: 'Engineer/Founder',
     role: 'Software Engineer / Founder of Career Karma',
-    specialties:
-      'Educatuon, Mentorship, learning new skills, crypto, fitness, growth hacking',
+    specialties: 'Educatuon, Mentorship, learning new skills, crypto, fitness, growth hacking',
     learning:
       'Building engineering teams, crypto, empathy, building strong relationships, purpose of life...',
     linkedin: 'https://urlgeni.us/linkedin/ctrC',
@@ -177,8 +174,7 @@ const surveyResponses = [
     name: 'Luis “Lu” De Castro',
     rolecategory: 'Engineer',
     role: 'Software Engineer ',
-    specialties:
-      'Motorsports(cars & motorcyles), videography, how to break into tech',
+    specialties: 'Motorsports(cars & motorcyles), videography, how to break into tech',
     learning: 'Everything ',
     linkedin: 'https://urlgeni.us/linkedin/pIzm',
     facebook: 'https://urlgeni.us/facebook/kxy6',
@@ -191,8 +187,7 @@ const surveyResponses = [
     name: 'Chris Gallello',
     rolecategory: 'Founder',
     role: 'Founder @ Purple.pm',
-    specialties:
-      'Design, PM, solo foundering, offshore work, remote teams, VR dev/design',
+    specialties: 'Design, PM, solo foundering, offshore work, remote teams, VR dev/design',
     learning: 'Other fun games for tiny saunas with 9 people in them',
     linkedin: 'https://urlgeni.us/linkedin/WKoH',
     facebook: 'https://urlgeni.us/facebook/QTz3',
@@ -300,10 +295,8 @@ const surveyResponses = [
     name: 'Sarah Brooks',
     rolecategory: 'Lawyer',
     role: 'Startup Law ',
-    specialties:
-      'Access to the legal system, blockchain, legal issues for startups',
-    learning:
-      'Self-improvement & mindfulness, investing, best adventure travel spots',
+    specialties: 'Access to the legal system, blockchain, legal issues for startups',
+    learning: 'Self-improvement & mindfulness, investing, best adventure travel spots',
     linkedin: 'https://urlgeni.us/linkedin/vQTi',
     facebook: 'https://urlgeni.us/facebook/L53R',
     instagram: 'https://urlgeni.us/instagram/kJIE',
@@ -385,10 +378,8 @@ const surveyResponses = [
     name: 'Patrick Rivera',
     rolecategory: 'Engineer',
     role: 'College student/Software Engineer',
-    specialties:
-      'Programming, Design, EdTech, EDM, Consciousness, and Meditation',
-    learning:
-      'How to cook, freestyle rap, martial arts, product management,  and blockchain',
+    specialties: 'Programming, Design, EdTech, EDM, Consciousness, and Meditation',
+    learning: 'How to cook, freestyle rap, martial arts, product management,  and blockchain',
     linkedin: 'https://urlgeni.us/linkedin/MAoC',
     facebook: 'https://urlgeni.us/facebook/Nd1E',
     instagram: 'https://urlgeni.us/instagram/LGQG',
