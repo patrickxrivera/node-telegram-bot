@@ -10,4 +10,8 @@ var getStartText = exports.getStartText = function getStartText(name) {
 var getRoleText = exports.getRoleText = function getRoleText(role) {
   return "Nice! \uD83D\uDE4C " + role + "s are pretty awesome. \n\nNow select a person to search";
 };
+
+var getCommandsText = exports.getCommandsText = function getCommandsText() {
+  return "All commands \uD83D\uDC81 \n\n/start - I'll guide you through searching for community members\n/commands - see all commands\n/roles - search for community members by role\n/instagram, /twitter, /facebook, /linkedin - receive a direct link to all community member accounts on that platform\n/engineers, /investors, /founders, /marketers, /designers, /product_managers - see all community members that have that role";
+};
 //# sourceMappingURL=text.js.map

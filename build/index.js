@@ -1,5 +1,9 @@
 'use strict';
 
+var _http = require('http');
+
+var _http2 = _interopRequireDefault(_http);
+
 var _env = require('./init/env.js');
 
 var _env2 = _interopRequireDefault(_env);
@@ -24,4 +28,13 @@ var bot = (0, _bot2.default)();
 
 (0, _server2.default)(bot);
 (0, _actions2.default)(bot);
+
+// Keep Heroku server from idling
+
+var appUrl = 'https://glacial-fortress-97853.herokuapp.com/';
+var fiveMinutes = 300000;
+
+setInterval(function () {
+  _http2.default.get(appUrl);
+}, fiveMinutes);
 //# sourceMappingURL=index.js.map
