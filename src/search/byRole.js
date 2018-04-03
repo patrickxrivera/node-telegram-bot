@@ -7,13 +7,13 @@ const getMembersByRole = (responses, targetRole) => {
   return formattedMembers;
 };
 
-const filterMembers = (responses, targetRole) =>
+export const filterMembers = (responses, targetRole) =>
   responses
     .filter((response) => filterByRole(response, targetRole))
-    .map(getName);
+    .map(getName)
+    .sort();
 
-const filterByRole = (response, targetRole) =>
-  response.rolecategory.includes(targetRole);
+const filterByRole = (response, targetRole) => response.rolecategory.includes(targetRole);
 
 const getName = (response) => response.name.trim();
 
