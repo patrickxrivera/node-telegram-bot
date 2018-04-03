@@ -12,7 +12,7 @@ const BotSettings = {
     this.token = process.env[tokenType];
   },
 
-  setBot(optns) {
+  setBot(optns = {}) {
     this.bot = new TelegramBot(this.token, optns);
   }
 };

@@ -25,7 +25,9 @@ var BotSettings = {
   setToken: function setToken(tokenType) {
     this.token = process.env[tokenType];
   },
-  setBot: function setBot(optns) {
+  setBot: function setBot() {
+    var optns = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
     this.bot = new _nodeTelegramBotApi2.default(this.token, optns);
   }
 };
