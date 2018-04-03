@@ -6,7 +6,6 @@ const isProdEnv = () => process.env.NODE_ENV === 'production';
 
 const setProdBot = () => {
   const token = process.env.TOKEN;
-  console.log(token);
   const bot = new TelegramBot(token);
   bot.setWebHook(process.env.HEROKU_URL + bot.token);
   return bot;
