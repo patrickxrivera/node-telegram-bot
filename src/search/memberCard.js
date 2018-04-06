@@ -16,6 +16,7 @@ const getAttribute = (key, val) => {
 };
 
 const concatAttributes = (person) => {
+  // TODO
   const card = reduce(
     person,
     (result, val, key) => result + getAttribute(key, val),

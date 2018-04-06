@@ -1,37 +1,45 @@
-import reduce from 'lodash/reduce';
+import { pipe, curry, sort, filter, reduce } from 'ramda';
 
 import { toTitleCase } from '../utils/helpers.js';
 import { attributes } from '../utils/attributes.js';
 
-const getTitleFor = (platform) => {
-  platform = toTitleCase(platform);
-  const getTitle = attributes[platform].title;
-  const title = getTitle(platform);
-  return title;
-};
+// ********************************
 
-const getMemberSocialLinksFor = (responses, platform) => {
-  const validLinks = responses
-    .filter((response) => response[platform])
-    .sort(byName);
-  const title = getTitleFor(platform);
-  const formattedLinks = reduce(
-    validLinks,
-    (acc, curr) => formatLinks(acc, curr, platform),
-    title
-  );
-  return formattedLinks;
-};
-
-const byName = (a, b) => (a.name < b.name ? -1 : 1);
-
-const formatLinks = (acc, curr, platform) => {
+const formatLinks = curry((platform, acc, curr) => {
   const link = curr[platform];
   const name = curr.name;
   const linkedText = name.link(link);
   const newLine = '\n';
 
   return acc + linkedText + newLine;
+});
+
+const pluckGetTitle = curry(
+  (attributes, platform) => attributes[platform].title
+);
+
+const byName = (a, b) => b.name < a.name;
+
+const byPlatform = curry((platform, response) => response[platform]);
+
+// ********************************
+
+// getTitleFor returns a function that uses platform as an argument
+const getTitleFor = (platform) =>
+  pipe(toTitleCase, pluckGetTitle(attributes))(platform)(platform);
+
+const getValidLinks = (responses, platform) =>
+  pipe(
+    filter(byPlatform(platform)),
+    sort(byName),
+    reduce(formatLinks(platform))(getTitleFor(platform))
+  )(responses);
+
+// ********************************
+
+const getMemberSocialLinksFor = (...props) => {
+  const formattedLinks = getValidLinks(...props);
+  return formattedLinks;
 };
 
 export default getMemberSocialLinksFor;

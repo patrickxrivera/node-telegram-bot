@@ -8,6 +8,7 @@ import handleCallback from '../utils/handleCallback';
 import { callbackQuery } from '../utils/helpers';
 
 const initActions = (bot) => {
+  // TODO
   bot.onText(regex.start, (msg) => sendStart(msg, bot));
   bot.onText(regex.commands, (msg) => sendCommands(msg, bot));
   bot.onText(regex.roles, (msg) => sendRole(msg, bot));
