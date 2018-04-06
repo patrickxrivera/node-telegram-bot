@@ -1,4 +1,4 @@
-const assignInlineFormatTo = (arr) => {
+const formatInline = (arr) => {
   const data = arr.map(assignOptns);
   const threeRowArray = createThreeRowArrayFor(data);
   return threeRowArray;
@@ -24,4 +24,4 @@ const createThreeRowArrayFor = (members) => {
   return formattedArray;
 };
 
-export default assignInlineFormatTo;
+export default formatInline;
