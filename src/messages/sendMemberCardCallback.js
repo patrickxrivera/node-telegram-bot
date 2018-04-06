@@ -3,7 +3,7 @@ import surveyResponses from '../data/surveyResponses';
 import { config, getBackBtnFor } from '../utils/helpers.js';
 
 const sendMemberCardCallback = (resp, bot) => {
-  const text = getMemberCardFrom(surveyResponses, resp.data);
+  const text = getMemberCardFrom(resp.data, surveyResponses);
   const optns = getOptnsFrom(resp);
   bot.editMessageText(text, optns);
 };
