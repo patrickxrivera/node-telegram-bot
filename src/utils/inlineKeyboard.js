@@ -1,27 +1,20 @@
-const formatInline = (arr) => {
-  const data = arr.map(assignOptns);
-  const threeRowArray = createThreeRowArrayFor(data);
-  return threeRowArray;
-};
+import { pipe, map } from 'ramda';
 
 const assignOptns = (item) => {
-  const optns = {
-    text: item,
-    callback_data: item
-  };
+  const optns = [
+    {
+      text: item,
+      callback_data: item
+    }
+  ];
   return optns;
 };
 
-const createThreeRowArrayFor = (members) => {
-  let formattedArray = [];
+const getRows = map(assignOptns);
 
-  while (members.length) {
-    const membersPerRow = 1;
-    const row = members.splice(0, membersPerRow);
-    formattedArray = [...formattedArray, row];
-  }
-
-  return formattedArray;
+const formatInline = (arr) => {
+  const rows = getRows(arr);
+  return rows;
 };
 
 export default formatInline;
