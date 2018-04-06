@@ -1,11 +1,19 @@
+import { pipe, filter, map, sort, curry } from 'ramda';
+
 import assignInlineFormatTo from '../utils/inlineKeyboard.js';
 
 const getMembersByRole = (responses, targetRole) => {
-  responses = responses.slice(); // don't mutate responses
+  responses = [...responses]; // don't mutate responses
   const memberNames = filterMembers(responses, targetRole);
   const formattedMembers = assignInlineFormatTo(memberNames);
   return formattedMembers;
 };
+
+// export const filterMembers = (responses) => pipe(
+//   filter(filterByRole),
+//   map(getName),
+//   sort
+// )
 
 export const filterMembers = (responses, targetRole) =>
   responses
@@ -13,7 +21,8 @@ export const filterMembers = (responses, targetRole) =>
     .map(getName)
     .sort();
 
-const filterByRole = (response, targetRole) => response.rolecategory.includes(targetRole);
+const filterByRole = (response, targetRole) =>
+  response.rolecategory.includes(targetRole);
 
 const getName = (response) => response.name.trim();
 
