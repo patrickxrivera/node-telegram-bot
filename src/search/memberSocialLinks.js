@@ -28,18 +28,11 @@ const byPlatform = curry((platform, response) => response[platform]);
 const getTitleFor = (platform) =>
   pipe(toTitleCase, pluckGetTitle(attributes))(platform)(platform);
 
-const getValidLinks = (responses, platform) =>
+const getMemberSocialLinksFor = ([...responses], platform) =>
   pipe(
     filter(byPlatform(platform)),
     sort(byName),
     reduce(formatLinks(platform))(getTitleFor(platform))
   )(responses);
-
-// ********************************
-
-const getMemberSocialLinksFor = (...props) => {
-  const formattedLinks = getValidLinks(...props);
-  return formattedLinks;
-};
 
 export default getMemberSocialLinksFor;

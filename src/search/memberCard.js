@@ -21,7 +21,7 @@ const getTargetMember = curry(
   (name, response) => response.name.trim() === name
 );
 
-const getMemberCardFrom = (name, responses) =>
+const getMemberCardFrom = (name, [...responses]) =>
   pipe(filter(getTargetMember(name)), head, toPairs, reduce(getAttribute)(''))(
     responses
   );
