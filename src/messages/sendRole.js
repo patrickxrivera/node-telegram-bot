@@ -20,7 +20,7 @@ export const getRoleDataFrom = (req) => {
 };
 
 const getReplyMarkup = (role) => {
-  const membersByRole = getMembersByRole(surveyResponses, role);
+  const membersByRole = getMembersByRole(role, surveyResponses);
   const lastView = 'start';
   const backBtn = getBackBtnFor(lastView);
   const inline_keyboard = [...membersByRole, ...backBtn];
