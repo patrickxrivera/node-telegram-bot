@@ -19,7 +19,7 @@ var _helpers = require('../utils/helpers.js');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var sendMemberCardCallback = function sendMemberCardCallback(resp, bot) {
-  var text = (0, _memberCard2.default)(_surveyResponses2.default, resp.data);
+  var text = (0, _memberCard2.default)(resp.data, _surveyResponses2.default);
   var optns = getOptnsFrom(resp);
   bot.editMessageText(text, optns);
 };

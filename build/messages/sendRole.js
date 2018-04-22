@@ -40,7 +40,7 @@ var getRoleDataFrom = exports.getRoleDataFrom = function getRoleDataFrom(req) {
 };
 
 var getReplyMarkup = function getReplyMarkup(role) {
-  var membersByRole = (0, _byRole2.default)(_surveyResponses2.default, role);
+  var membersByRole = (0, _byRole2.default)(role, _surveyResponses2.default);
   var lastView = 'start';
   var backBtn = (0, _helpers.getBackBtnFor)(lastView);
   var inline_keyboard = [].concat(_toConsumableArray(membersByRole), _toConsumableArray(backBtn));

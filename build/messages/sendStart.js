@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _ramda = require('ramda');
+
 var _inlineKeyboard = require('../utils/inlineKeyboard.js');
 
 var _inlineKeyboard2 = _interopRequireDefault(_inlineKeyboard);
@@ -18,16 +20,18 @@ var _text = require('../utils/text.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var formatMarkup = function formatMarkup(roles) {
+  return { reply_markup: { inline_keyboard: roles } };
+};
+
+var getOptns = (0, _ramda.pipe)(_inlineKeyboard2.default, formatMarkup);
+
+var getWelcomeText = (0, _ramda.pipe)(_helpers.getNameFrom, _text.getStartText);
+
 var sendStart = function sendStart(msg, bot) {
   var id = (0, _helpers.getIdFrom)(msg);
-  var name = (0, _helpers.getNameFrom)(msg);
-  var text = (0, _text.getStartText)(name);
-  var formattedRoles = (0, _inlineKeyboard2.default)(_roles2.default);
-  var optns = {
-    reply_markup: {
-      inline_keyboard: formattedRoles
-    }
-  };
+  var text = getWelcomeText(msg);
+  var optns = getOptns(_roles2.default);
   bot.sendMessage(id, text, optns);
 };
 

@@ -1,36 +1,25 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-var assignInlineFormatTo = function assignInlineFormatTo(arr) {
-  var data = arr.map(assignOptns);
-  var threeRowArray = createThreeRowArrayFor(data);
-  return threeRowArray;
-};
+var _ramda = require('ramda');
 
 var assignOptns = function assignOptns(item) {
-  var optns = {
+  var optns = [{
     text: item,
     callback_data: item
-  };
+  }];
   return optns;
 };
 
-var createThreeRowArrayFor = function createThreeRowArrayFor(members) {
-  var formattedArray = [];
+var getRows = (0, _ramda.map)(assignOptns);
 
-  while (members.length) {
-    var membersPerRow = 1;
-    var row = members.splice(0, membersPerRow);
-    formattedArray = [].concat(_toConsumableArray(formattedArray), [row]);
-  }
-
-  return formattedArray;
+var formatInline = function formatInline(arr) {
+  var rows = getRows(arr);
+  return rows;
 };
 
-exports.default = assignInlineFormatTo;
+exports.default = formatInline;
 //# sourceMappingURL=inlineKeyboard.js.map

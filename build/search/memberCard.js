@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reduce = require('lodash/reduce');
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
-var _reduce2 = _interopRequireDefault(_reduce);
+var _ramda = require('ramda');
 
 var _attributes = require('../utils/attributes.js');
 
@@ -20,33 +20,38 @@ var _helpers = require('../utils/helpers.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var getMemberCardFrom = function getMemberCardFrom(responses, name) {
-  var targetMember = getTargetMember(responses, name);
-  var card = concatAttributesFor(targetMember);
-  return card;
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
+
+var pluckFormat = function pluckFormat(key) {
+  return _attributes2.default[key].format;
 };
 
-var getTargetMember = function getTargetMember(responses, name) {
-  return responses.filter(function (response) {
-    return response.name.trim() === name;
-  })[0];
+var getFormattedCard = function getFormattedCard(key, data) {
+  return pluckFormat(key)(data);
 };
 
-var concatAttributesFor = function concatAttributesFor(person) {
-  var card = (0, _reduce2.default)(person, function (result, val, key) {
-    return result + getAttribute(key, val);
-  }, '');
-  return card;
-};
+var getAttribute = function getAttribute(acc, _ref) {
+  var _ref2 = _slicedToArray(_ref, 2),
+      key = _ref2[0],
+      val = _ref2[1];
 
-var getAttribute = function getAttribute(key, val) {
   key = (0, _helpers.toTitleCase)(key);
 
   var data = { key: key, val: val };
-  var format = _attributes2.default[key].format;
-  var formattedCard = format(data);
+  var formattedCard = getFormattedCard(key, data);
 
-  return formattedCard;
+  return acc + formattedCard;
+};
+
+var getTargetMember = (0, _ramda.curry)(function (name, response) {
+  return response.name.trim() === name;
+});
+
+var getMemberCardFrom = function getMemberCardFrom(name, _ref3) {
+  var _ref4 = _toArray(_ref3),
+      responses = _ref4.slice(0);
+
+  return (0, _ramda.pipe)((0, _ramda.filter)(getTargetMember(name)), _ramda.head, _ramda.toPairs, (0, _ramda.reduce)(getAttribute)(''))(responses);
 };
 
 exports.default = getMemberCardFrom;

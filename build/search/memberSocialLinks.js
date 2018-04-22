@@ -4,45 +4,49 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reduce = require('lodash/reduce');
-
-var _reduce2 = _interopRequireDefault(_reduce);
+var _ramda = require('ramda');
 
 var _helpers = require('../utils/helpers.js');
 
 var _attributes = require('../utils/attributes.js');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
-var getTitleFor = function getTitleFor(platform) {
-  platform = (0, _helpers.toTitleCase)(platform);
-  var getTitle = _attributes.attributes[platform].title;
-  var title = getTitle(platform);
-  return title;
-};
+// ********************************
 
-var getMemberSocialLinksFor = function getMemberSocialLinksFor(responses, platform) {
-  var validLinks = responses.filter(function (response) {
-    return response[platform];
-  }).sort(byName);
-  var title = getTitleFor(platform);
-  var formattedLinks = (0, _reduce2.default)(validLinks, function (acc, curr) {
-    return formatLinks(acc, curr, platform);
-  }, title);
-  return formattedLinks;
-};
-
-var byName = function byName(a, b) {
-  return a.name < b.name ? -1 : 1;
-};
-
-var formatLinks = function formatLinks(acc, curr, platform) {
+var formatLinks = (0, _ramda.curry)(function (platform, acc, curr) {
   var link = curr[platform];
   var name = curr.name;
   var linkedText = name.link(link);
   var newLine = '\n';
 
   return acc + linkedText + newLine;
+});
+
+var pluckGetTitle = (0, _ramda.curry)(function (attributes, platform) {
+  return attributes[platform].title;
+});
+
+var byName = function byName(a, b) {
+  return b.name < a.name;
+};
+
+var byPlatform = (0, _ramda.curry)(function (platform, response) {
+  return response[platform];
+});
+
+// ********************************
+
+// getTitleFor returns a function that uses platform as an argument
+var getTitleFor = function getTitleFor(platform) {
+  return (0, _ramda.pipe)(_helpers.toTitleCase, pluckGetTitle(_attributes.attributes))(platform)(platform);
+};
+
+var getMemberSocialLinksFor = function getMemberSocialLinksFor(_ref, platform) {
+  var _ref2 = _toArray(_ref),
+      responses = _ref2.slice(0);
+
+  return (0, _ramda.pipe)((0, _ramda.filter)(byPlatform(platform)), (0, _ramda.sort)(byName), (0, _ramda.reduce)(formatLinks(platform))(getTitleFor(platform)))(responses);
 };
 
 exports.default = getMemberSocialLinksFor;

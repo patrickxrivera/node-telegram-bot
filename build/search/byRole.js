@@ -3,7 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.filterMembers = undefined;
+
+var _ramda = require('ramda');
 
 var _inlineKeyboard = require('../utils/inlineKeyboard.js');
 
@@ -11,25 +12,25 @@ var _inlineKeyboard2 = _interopRequireDefault(_inlineKeyboard);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var getMembersByRole = function getMembersByRole(responses, targetRole) {
-  responses = responses.slice(); // don't mutate responses
-  var memberNames = filterMembers(responses, targetRole);
-  var formattedMembers = (0, _inlineKeyboard2.default)(memberNames);
-  return formattedMembers;
-};
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
-var filterMembers = exports.filterMembers = function filterMembers(responses, targetRole) {
-  return responses.filter(function (response) {
-    return filterByRole(response, targetRole);
-  }).map(getName).sort();
-};
-
-var filterByRole = function filterByRole(response, targetRole) {
-  return response.rolecategory.includes(targetRole);
+var aToZ = function aToZ(a, b) {
+  return b < a;
 };
 
 var getName = function getName(response) {
   return response.name.trim();
+};
+
+var byRole = (0, _ramda.curry)(function (targetRole, response) {
+  return response.rolecategory.includes(targetRole);
+});
+
+var getMembersByRole = function getMembersByRole(targetRole, _ref) {
+  var _ref2 = _toArray(_ref),
+      responses = _ref2.slice(0);
+
+  return (0, _ramda.pipe)((0, _ramda.filter)(byRole(targetRole)), (0, _ramda.map)(getName), (0, _ramda.sort)(aToZ), _inlineKeyboard2.default)(responses);
 };
 
 exports.default = getMembersByRole;

@@ -37,6 +37,7 @@ var _helpers = require('../utils/helpers');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var initActions = function initActions(bot) {
+  // TODO
   bot.onText(_regex2.default.start, function (msg) {
     return (0, _sendStart2.default)(msg, bot);
   });
