@@ -11,3 +11,11 @@ const bot = initBot();
 
 initServer(bot);
 initActions(bot);
+
+// Keep Heroku server from sleeping #TeamNoSleep
+const appUrl = 'http://glacial-fortress-97853.herokuapp.com/';
+const fiveMinutes = 300000;
+
+setInterval(() => {
+  http.get(appUrl);
+}, fiveMinutes);
