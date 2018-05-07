@@ -3,7 +3,7 @@
 # MVP List
 
 - [x] Display list of commands on open
-- [x] Allow usere to search by member and role
+- [x] Allow user to search by member and role
 - [x] Visualize one member at a time
 - [x] Ensure social media accounts are deep linked on mobile
 - [x] Add commands for all social media platforms that links to member's accounts
