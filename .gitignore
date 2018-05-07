@@ -1,4 +1,6 @@
 /node_modules
+/src/data/surveyResponses.js
+
 package-lock.json
 
 # Heroku environment configuration
