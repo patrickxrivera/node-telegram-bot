@@ -1,6 +1,6 @@
 # telegram-bot-for-rise-community
 
-[Install Telegram Bot](https://t.me/rise_fam_bot)
+[Install](https://t.me/rise_fam_bot)
 
 Telegram bot that takes Google form survey data from 50+ community members and creates a navigable interface for viewing survey data.
 
