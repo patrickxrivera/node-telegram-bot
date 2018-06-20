@@ -1,5 +1,6 @@
 /node_modules
 /src/data/surveyResponses.js
+/build
 
 package-lock.json
 
