@@ -1,4 +1,4 @@
-# telegram-bot-for-rise-community
+# node-telegram-bot
 
 [Install](https://t.me/rise_fam_bot)
 
